@@ -1,9 +1,15 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import bg from '../../src/assets/bg.jpg'
+import logo from '../../src/assets/fav.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
 
 // import Banner from './Banner';
 
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext);
+  console.log(user);
+ 
 
     const links = [
        <div className='text-lg flex'>
@@ -13,7 +19,7 @@ const Navbar = () => {
        </div>
     ]
     return (
-        <div className='bg-opacity-40 bg-black '     style={{
+        <div className='bg-opacity-40 '     style={{
             backgroundImage: `linear-gradient(#00000080, #00000080), url(${bg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'to',
@@ -48,7 +54,10 @@ const Navbar = () => {
             }
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+      <Link to={'/'} className='flex items-center'>
+        <img className='w-16 rounded-full' src={logo} alt="" />
+      <p className="btn btn-ghost text-xl">Chill Game</p>
+      </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -57,8 +66,13 @@ const Navbar = () => {
            }
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-4">
+         {
+          user ? <p>{user.email}</p>:  <Link to={'/register'} className='btn btn-ghost border lg:text-lg border-white'>Register</Link>
+         }
+          {
+            user ? <button onClick={logOut}  className='btn btn-ghost border lg:text-lg border-white'>Log Out</button>  : <Link to={'/login'} className='btn btn-ghost border lg:text-lg border-white'>Login</Link>
+          }
         </div>
       </div>
 

@@ -7,3 +7,27 @@
     background-color: blue;
     color: blue;
 }
+
+
+/* Tailwind styles for confirm button */
+.swal2-confirm.custom-confirm-button {
+    @apply bg-[#10B5B5] w-96 text-white py-2 px-4 rounded-lg font-semibold text-lg focus:outline-none;
+  }
+  
+  .swal2-popup.custom-popup {
+    @apply p-6 bg-white rounded-lg shadow-lg max-w-lg mx-auto;
+  }
+  
+  .swal2-title.custom-title {
+    @apply text-xl font-bold text-center mb-4;
+  }
+  
+  .swal2-icon.custom-icon {
+    @apply mb-4;
+  }
+  .swal2-title.custom-title{
+    @apply text-white lg:text-2xl
+  }
+  .swal2-text.custom-text{
+    @apply text-white lg:text-2xl
+  }
