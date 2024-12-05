@@ -6,6 +6,10 @@ import Home from "../Home";
 import Login from "../Pages/Login";
 import AddReviews from "../Pages/AddReviews";
 import PrivateRoute from "../Provider/PrivateRoute";
+import HighRateCard from "../Components/HighRateCard";
+import ReviewDetails from "../Pages/ReviewDetails";
+import AllReviews from "../Pages/Allreviews";
+import MyReviews from "../Pages/MyReviews";
 
 
 const router = createBrowserRouter([
@@ -29,6 +33,24 @@ element: <Home></Home>
                 path: '/addReviews',
                 element: <PrivateRoute>
                     <AddReviews></AddReviews>
+                </PrivateRoute>
+            },
+            {
+                path: '/reviews/:id',
+                element: <PrivateRoute>
+                    <ReviewDetails></ReviewDetails>
+                </PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/reviews/${params.id}`)
+            },
+            {
+                path: '/allReviews',
+                element: <AllReviews></AllReviews>,
+                loader : () => fetch('http://localhost:5000/reviewss')
+            },
+            {
+                path: '/myReview',
+                element: <PrivateRoute>
+                    <MyReviews></MyReviews>
                 </PrivateRoute>
             }
         ]

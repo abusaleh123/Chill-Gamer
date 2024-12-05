@@ -74,7 +74,7 @@ const AddReviews = () => {
         <div style={{backgroundImage: `url(${bg})` , backgroundSize: 'cover'}} className="bg-transparent text-white  min-h-screen flex items-center justify-center">
             <div className="w-full lg:w-8/12 border border-white-600 backdrop-blur-xl p-8 rounded-lg shadow-lg">
                 <form onSubmit={handleAddReview} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <h2 className="lg:text-5xl text-white bg-white/50 rounded-xl border border-black font-bold text-center col-span-1 md:col-span-2 mb-4">
+                    <h2 className="lg:text-5xl text-white  rounded-xl   font-bold text-center col-span-1 md:col-span-2 mb-4">
                         Game Review Form
                     </h2>
 
@@ -211,7 +211,7 @@ const AddReviews = () => {
                     <div className="col-span-1 md:col-span-2">
                         <button
                             type="submit"
-                            className="w-full btn btn-ghost border-white hover:bg-purple-600  text-lg font-bold py-2 rounded hover:border transition"
+                            className="w-full btn btn-ghost border-white   text-lg font-bold py-2 rounded hover:border transition"
                         >
                             Submit Review
                         </button>
