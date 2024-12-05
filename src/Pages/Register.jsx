@@ -2,29 +2,30 @@ import { useContext } from 'react';
 import bg from '../../src/assets/regibg.jpg'
 import { AuthContext } from '../Provider/AuthProvider';
 import auth from '../firebase.init';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
 import modalImg from '../../src/assets/modal.jpg'
 
 const Register = () => {
-    const {registerWithEmailPass} = useContext(AuthContext);
+    const {registerWithEmailPass, setUser, updateProfiler} = useContext(AuthContext);
+    const navigate = useNavigate()
     // console.log(registerWithEmailPass);
    
     const handleSubmit = e => {
         e.preventDefault()
-        const form = e.target;
-        const name = form.name.value;
-        const email = form.email.value;
-        const photo = form.photo.value;
-        const password = form.password.value;
+        
+        const name = e.target.name.value
+        const email = e.target.email.value;
+        const photo = e.target.photo.value
+        const password = e.target.password.value
         console.log(name, email, photo, password);
 
 
     
 
-        if(password > 6) {
+        if(password.length < 6) {
             toast.error('Password should be at least 6 character')
             return
         }
@@ -36,8 +37,15 @@ const Register = () => {
           return
         }
 
-       registerWithEmailPass(email, password, auth) 
-       .then(result => {
+       registerWithEmailPass(email, password) 
+       .then((result) => {
+        console.log(result.user);
+
+        updateProfiler({displayName: name, photoURL : photo})
+    .then(() => {
+     
+    })
+    setUser(result);
         Swal.fire({
           icon: "success",
           title: "Registration Successful!",
@@ -58,7 +66,9 @@ const Register = () => {
           buttonsStyling: true
         });
 
-        console.log(result.user);
+       
+    
+        navigate('/')
        })
        .catch(error => {
         console.log(error.message);

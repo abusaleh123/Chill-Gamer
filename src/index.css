@@ -4,8 +4,22 @@
 
 
 .active{
-    background-color: blue;
-    color: blue;
+
+    color:red;
+    text-decoration: underline;
+
+    
+}
+
+.nav:hover{
+  color:red;
+  text-decoration: underline;
+  transition: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.active:hover{
+  color:red
 }
 
 
@@ -31,3 +45,20 @@
   .swal2-text.custom-text{
     @apply text-white lg:text-2xl
   }
+
+
+
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+
+  body{
+    font-family: "EB Garamond", serif;
+  }
+ 
+ 
+  

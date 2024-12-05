@@ -1,4 +1,5 @@
 import Banner from "./Components/Banner";
+import HighRated from "./Components/HighRated";
 import Navbar from "./Components/Navbar";
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Navbar></Navbar>
             <Banner></Banner>
+            <HighRated></HighRated>
         </div>
     );
 };

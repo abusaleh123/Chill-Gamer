@@ -18,7 +18,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 const Banner = () => {
   return (
-    <div className='absplute'>
+    <div className='relative min-h-screen'>
     <Swiper
     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube]}
     spaceBetween={0}
@@ -35,11 +35,11 @@ const Banner = () => {
     
 
       <SwiperSlide style={{  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${slider1})`,  backgroundPosition: 'center',
-    backgroundSize: 'cover',}} className=' flex justify-center items-center  mx-auto'>
+    backgroundSize: 'cover',}} className=' flex justify-center  relative items-center my-auto  mx-auto'>
 {/* <img className="w-screen h-screen object-cover relative" src={slider1} alt="" /> */}
 <div >
 
-     <div className='flex flex-col justify-center items-center lg:min-h-screen'>
+     <div className='flex flex-col justify-center items-center min-h-screen'>
      <h1 className='text-white lg:mb-8 text-xl lg:text-6xl font-bold w-2/4 text-center '>The Best Game Reviews for Every Genre, Platform, and Player</h1>
     
       <p className='lg:w-3/4 text-center  text-[#969692] font-semibold lg:mb-10 lg:text-lg lg:tracking-normal lg:leading-8'>Your go-to source for game reviews tailored to your preferences. Explore diverse genres and platforms with detailed critiques and ratings to ensure your next game is a perfect match.</p>
@@ -55,7 +55,7 @@ const Banner = () => {
 {/* <img className="w-screen h-screen object-cover relative" src={slider1} alt="" /> */}
 <div >
 
-     <div className='flex flex-col justify-center items-center w-full lg:min-h-screen'> 
+     <div className='flex flex-col justify-center items-center w-full min-h-screen'> 
      <h1 className='text-white lg:mb-8 text-xl lg:text-6xl font-bold w-2/4 text-center'>Explore, Review, and Play: Your Ultimate Gaming Companion Hub</h1>
     
       <p className='lg:w-3/4 text-center text-[#acaca7] font-semibold lg:mb-10 lg:text-lg lg:tracking-normal lg:leading-8'> Discover the latest games, read in-depth reviews, and dive into expert recommendations. From action-packed adventures to strategic simulations, we’re here to guide every player through their gaming journey.</p>
@@ -71,7 +71,7 @@ const Banner = () => {
 {/* <img className="w-screen h-screen object-cover relative" src={slider1} alt="" /> */}
 <div className=' '>
 
-     <div className='flex flex-col justify-center items-center w-full lg:min-h-screen'>
+     <div className='flex flex-col justify-center items-center w-full min-h-screen'>
      <h1 className='text-white lg:mb-8 text-xl lg:text-6xl font-bold w-2/4 text-center'>Unbiased Game Reviews for Gamers on Every Platform Worldwide</h1>
      
       <p className='lg:w-3/4 text-center text-[#acaca7] font-semibold lg:mb-10 lg:text-lg lg:tracking-normal lg:leading-8'>Stay informed with fair and detailed reviews of the latest games across all platforms. Whether you’re on PC, console, or mobile, we bring you honest insights to help you choose the best gaming experiences.</p>

@@ -11,6 +11,7 @@ import modalImg from '../../src/assets/modal.jpg'
 const Login = () => {
     const {loginWithEmailPass, googleSgnIn, provider, setUser, user} = useContext(AuthContext);
     const navigate = useNavigate()
+    console.log(user);
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -39,10 +40,10 @@ const Login = () => {
                 },
                 buttonsStyling: true
               });
+              console.log(result);
       
-              setUser(result.user);
+              setUser(result);
               navigate('/')
-              console.log(user);
             })
             .catch(error => {
 
@@ -76,7 +77,8 @@ const Login = () => {
   googleSgnIn(auth, provider)
   .then(result => {
     console.log(result.user);
-    setUser(result.user)
+    setUser(result)
+    navigate('/')
     console.log(user);
   })
   .catch(error => {
@@ -102,7 +104,8 @@ const Login = () => {
     <div className="card bg-blend-hard-light border w-full max-w-sm shrink-0  shadow-2xl">
       <form onSubmit={handleSubmit} className="card-body  backdrop-blur-sm bg-white/20 flex justify-center">
       <div>
-        <h1 className='text-4xl font-bold text-white'>Register Now</h1>
+        <h1 className='text-4xl font-bold text-white'>Welcome Back!</h1>
+        <p className='mt-2'>Enter your details below to sign in into your account</p>
       </div>
       
         <div className="form-control">
