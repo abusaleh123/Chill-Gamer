@@ -10,6 +10,7 @@ import HighRateCard from "../Components/HighRateCard";
 import ReviewDetails from "../Pages/ReviewDetails";
 import AllReviews from "../Pages/Allreviews";
 import MyReviews from "../Pages/MyReviews";
+import UpdateReview from "../Pages/UpdateReview";
 
 
 const router = createBrowserRouter([
@@ -51,7 +52,15 @@ element: <Home></Home>
                 path: '/myReview',
                 element: <PrivateRoute>
                     <MyReviews></MyReviews>
-                </PrivateRoute>
+                </PrivateRoute>,
+                loader: () => fetch('http://localhost:5000/reviewss')
+            },
+            {
+                path: '/updateReview/:id',
+                element: <PrivateRoute>
+                    <UpdateReview></UpdateReview>
+                </PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/reviewss/${params.id}`)
             }
         ]
     }

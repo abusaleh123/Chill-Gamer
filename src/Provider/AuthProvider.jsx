@@ -27,6 +27,7 @@ const AuthProvider = ({children}) => {
     }
 
     const googleSgnIn = (auth, provider) =>  {
+        setLoading(true)
             return signInWithPopup(auth, provider)
     }
 
@@ -56,7 +57,8 @@ const authInfo = {
     provider,
     setUser,
     logOut,
-    updateProfiler
+    updateProfiler,
+    setLoading
 }
 
     return (

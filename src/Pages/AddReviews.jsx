@@ -61,7 +61,9 @@ const AddReviews = () => {
                     },
                     buttonsStyling: true
                   });
-               }
+                }
+                form.reset()
+             
             })
             .catch(error => {
                 console.log(error);
