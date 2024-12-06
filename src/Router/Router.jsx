@@ -12,16 +12,19 @@ import AllReviews from "../Pages/Allreviews";
 import MyReviews from "../Pages/MyReviews";
 import UpdateReview from "../Pages/UpdateReview";
 import MyWatchList from "../Pages/MyWatchList";
+import ErrorPage from "../Pages/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
 path: '/',
-element: <Home></Home>
+element: <Home></Home>,
+errorElement: <ErrorPage></ErrorPage>
     },
     {
         path: '/',
         element: <Base></Base>,
+     
         children: [
             {
                 path: "/register",

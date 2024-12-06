@@ -20,7 +20,7 @@ const HighRated = () => {
                 <p className='text-xl text-white/80 mt-2 mb-10'>A visually stunning open-world adventure with engaging combat, deep storytelling, rich lore, and dynamic gameplay that captivates players</p>
             </div>
 
-           <div  className='w-10/12 pt-10 mx-auto grid grid-cols-3 gap-10'>
+           <div  className='w-10/12 pt-10 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:pb-40'>
            {
                 highRate.map(high => <HighRateCard key={high._Id} high={high}></HighRateCard> )
             }

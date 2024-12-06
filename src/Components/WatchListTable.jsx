@@ -12,7 +12,7 @@ const WatchListTable = ({watchListAdd}) => {
         <th>Name</th>
         <th>Rating</th>
         <th>Favorite Color</th>
-        <th>Delete/Update</th>
+       
       </tr>
     </thead>
     <tbody>

@@ -29,8 +29,8 @@ const MyWatchList = () => {
     ))
   ) : (
    <div className="py-48 border rounded-xl bg-[#A70088]">
-    <p className="text-white flex justify-center text-7xl ">No Review Added</p>
-    <p className="text-2xl flex justify-center">It seems you haven’t added any reviews yet. Start sharing your experiences now!</p>
+    <p className="text-white flex justify-center text-7xl ">No WatchList Added</p>
+    <p className="text-2xl flex justify-center">It seems you haven’t added any WatchList yet. Start sharing your experiences now!</p>
    </div>
   )
 }
