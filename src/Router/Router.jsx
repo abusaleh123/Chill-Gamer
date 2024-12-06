@@ -11,6 +11,7 @@ import ReviewDetails from "../Pages/ReviewDetails";
 import AllReviews from "../Pages/Allreviews";
 import MyReviews from "../Pages/MyReviews";
 import UpdateReview from "../Pages/UpdateReview";
+import MyWatchList from "../Pages/MyWatchList";
 
 
 const router = createBrowserRouter([
@@ -61,6 +62,13 @@ element: <Home></Home>
                     <UpdateReview></UpdateReview>
                 </PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/reviewss/${params.id}`)
+            },
+            {
+                path: '/myWatchList',
+                element:<PrivateRoute>
+                     <MyWatchList></MyWatchList>
+                </PrivateRoute>,
+                loader : () => fetch('http://localhost:5000/myWatchList')
             }
         ]
     }

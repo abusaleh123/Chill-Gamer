@@ -43,7 +43,16 @@ const Navbar = () => {
           backgroundImage: `url(${bg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-        }
+        } : location.pathname.startsWith('/updateReview/') && location.pathname.split('/')[4] === user._id
+        ? {
+            backgroundImage: `url(${bg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          } : location.pathname === "/myWatchList" ?  {
+            backgroundImage: `url(${bg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }
       : "absolute top-0  z-10 bg-opacity-40 ";
 
   const handleSignOut = () => {
@@ -110,7 +119,7 @@ const Navbar = () => {
           </div>
           <Link to={"/"} className="flex items-center">
             <img className="w-16 rounded-full" src={logo} alt="" />
-            <p className="btn btn-ghost text-xl">Chill Game</p>
+            <p className="btn btn-ghost text-4xl">Chill Game</p>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -130,9 +139,16 @@ const Navbar = () => {
                 Add Reviews
               </NavLink>
             )}
-            <NavLink className={"text-xl nav"} to={"/myReview"}>
+            {
+              user && <NavLink className={"text-xl nav"} to={"/myReview"}>
               My Reviews
             </NavLink>
+            }
+            {
+              user && <NavLink className={"text-xl nav"} to={"/myWatchList"}>
+              My WatchList
+            </NavLink>
+            }
           </ul>
         </div>
         <div className="navbar-end gap-4">

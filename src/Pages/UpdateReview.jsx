@@ -7,18 +7,22 @@ import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
 import bg from '../../src/assets/addreviewbg.jpg';
 import modalImg from '../../src/assets/modal.jpg'
 import Swal from 'sweetalert2';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
 
 
 const UpdateReview = () => {
+    const navigate = useNavigate()
+   const {id} = useParams();
+   console.log(id);
     const updateReview = useLoaderData();
-    console.log(updateReview);
+    console.log(updateReview._id);
 
     const { user } = useContext(AuthContext);
-    const [rating, setRating] = useState(0);
+    const [rating, setRating] = useState(updateReview.rating || 0);
 
     const handleRatingChange = (value) => {
         setRating(value);
+        // defaultValue
         console.log("Selected rating:", rating);
     };
 
@@ -33,47 +37,34 @@ const UpdateReview = () => {
         const review = form.review.value;
         const genres = form.genres.value;
         const email = form.email.value;
-        const userName = form.username.value;
+        const username = form.username.value;
         const year = form.year.value;
-        console.log(cover, title, review, genres, email, userName, rating, year);
 
-        const newReview = {cover, title, review, genres,  rating, year, email, userName}
-        
-            fetch('http://localhost:5000/reviews', {
-                method: "PUT",
-                headers: {
-                    'content-type' : 'application/json'
-                },
-                body: JSON.stringify(newReview)
-            })
+        const updateReview = {cover, title, review, genres,  rating, year, email, username}
+        fetch(`http://localhost:5000/reviewss/${id}`, {
+            method: "PUT",
+            headers: {
+              'Content-type': 'application/json',
+            },
+            body: JSON.stringify(updateReview)
+          })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-               if(data.insertedId){
-                Swal.fire({
-                    icon: "success",
-                    title: "Review Add Successful!",
-                    text: "You Are Successfully Add A Review",
-                    background: `url(${modalImg}) no-repeat center top`, 
-                    backgroundSize: 'cover', 
-                    confirmButtonText: 'Close',
-                    showCancelButton: false,
-                    customClass: {
-                      confirmButton: 'custom-confirm-button',
-                    
-                      popup: 'custom-popup', 
-                      title: 'custom-title', 
-                      icon: 'custom-icon' ,
-                      
-                    },
-                    buttonsStyling: true
-                  });
-                }
-                form.reset()
+                if(data.modifiedCount > 0){
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Coffee Update Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Close'
+                      })
+                      navigate('/myReview')
+                    }
+                // form.reset()
              
             })
             .catch(error => {
-                console.log(error);
+                console.log(error.message);
             })
 
 
@@ -88,7 +79,7 @@ const UpdateReview = () => {
         <div className="w-full lg:w-8/12 border border-white-600 backdrop-blur-xl p-8 rounded-lg shadow-lg">
             <form onSubmit={handleUpdateReview} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <h2 className="lg:text-5xl text-white  rounded-xl   font-bold text-center col-span-1 md:col-span-2 mb-4">
-                    Game Review Form
+                    Update Review Form
                 </h2>
 
                 {/* Game Cover Image */}
@@ -100,6 +91,7 @@ const UpdateReview = () => {
                         type="url"
                         id="cover"
                         name="cover"
+                        defaultValue={updateReview.cover}
                         placeholder="Enter game cover URL"
                         className="w-full p-2 border-2 border-gray-500 rounded bg-white/20 text-white hover:border-red-500 focus:border-red-500 focus:outline-none"
                         required
@@ -115,6 +107,7 @@ const UpdateReview = () => {
                         type="text"
                         id="title"
                         name="title"
+                        defaultValue={updateReview.title}
                         placeholder="Enter game title"
                         className="w-full p-2 border-2 border-gray-500 rounded  bg-white/20  text-white hover:border-red-500 focus:border-red-500 focus:outline-none"
                         required
@@ -129,7 +122,7 @@ const UpdateReview = () => {
                     <input
                         id="review"
                         name="review"
-                        
+                        defaultValue={updateReview.review}
                         placeholder="Write your review"
                         className="w-full p-2 border-2 border-gray-500 rounded bg-white/20  text-white hover:border-red-500 focus:border-red-500 focus:outline-none"
                         required
@@ -166,6 +159,7 @@ const UpdateReview = () => {
                         name="year"
                         min="2000"
                         max="2024"
+                        defaultValue={updateReview.year}
                         className="w-full p-2 border-2 border-gray-500 rounded bg-white/20  text-white hover:border-red-500 focus:border-red-500 focus:outline-none"
                         required
                     />
@@ -226,7 +220,7 @@ const UpdateReview = () => {
                         type="submit"
                         className="w-full btn btn-ghost border-white   text-lg font-bold py-2 rounded hover:border transition"
                     >
-                        Submit Review
+                       Update Review
                     </button>
                 </div>
             </form>

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import MyReviewCard from "../Components/MyReviewCard";
@@ -9,9 +9,10 @@ const MyReviews = () => {
   const reviews = useLoaderData();
   const [reviewUser, setReviewUser] = useState(reviews);
   console.log(reviewUser);
-  console.log(reviews);
+
+
 const email = user.email
-  const myReview = reviews.filter(review => review.email === email);
+  const myReview = reviewUser.filter(review => review.email === email);
   console.log(myReview);
   return (
     <div>
@@ -19,25 +20,12 @@ const email = user.email
         <h1 className="text-6xl font-semibold text-white">My Review</h1>
         <p className="text-xl mt-2">Here Is All My review that i added</p>
       </div>
-      <div>
-      <div className="overflow-x-auto bg-black">
- 
-</div>
-      </div>
+    
     <div className="bg-black">
-     {/* {
-      myReview.map(review => {
-        if(review.length > 0){
-          return        <MyReviewCard key={review._id} review={review}></MyReviewCard>
-        }
-        else{
-          <p className="text-white">No Data Add</p>
-        }
-      } )
-     } */}
+  
      {
-  reviewUser.length > 0 ? (
-    reviewUser.map(reviewUser => (
+  myReview.length > 0 ? (
+    myReview.map(reviewUser => (
       <MyReviewCard key={reviewUser._id} reviewUser={reviewUser} />
     ))
   ) : (
