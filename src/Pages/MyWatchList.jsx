@@ -12,7 +12,8 @@ const MyWatchList = () => {
     // console.log(myWatchList);
 
     const email = user.email;
-    const newWatchList = myWatchList.filter(watch => watch.email === email);
+    console.log(email);
+    const newWatchList = myWatchList.filter(watch => watch.email == email);
 
     return (
         <div>
