@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import bg from "../../src/assets/bg.jpg";
 import logo from "../../src/assets/fav.jpg";
 import { useContext } from "react";
@@ -10,6 +10,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 const Navbar = ({ toggleTheme, isDarkMode }) => {
   const { user, logOut } = useContext(AuthContext);
   const location = useLocation();
+  const navigate = useNavigate()
   // console.log(user);
 
 
@@ -65,6 +66,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
     logOut()
       .then((result) => {
         // console.log(result.user);
+        navigate('/')
       })
       .catch((error) => {
         // console.log(error);
@@ -125,7 +127,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           </div>
           <Link to={"/"} className="flex items-center">
             <img className="w-16 rounded-full" src={logo} alt="" />
-            <p className="btn btn-ghost text-4xl"></p>
+            <p className="btn btn-ghost text-4xl">Chill Gamer</p>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -166,7 +168,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
                 <img
                   className="w-10 h-10 rounded-full cursor-pointer"
                   src={user.photoURL}
-                  alt="User"
+                  alt="Profile"
                 />
               </div>
             </>
@@ -179,12 +181,13 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             </Link>
           )}
           {user ? (
-            <button
+            <Link to={'/'}
+
               onClick={handleSignOut}
               className="btn btn-ghost border lg:text-lg border-white"
             >
               Log Out
-            </button>
+            </Link>
           ) : (
             <Link
               to={"/login"}

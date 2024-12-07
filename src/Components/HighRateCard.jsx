@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const HighRateCard = ({high}) => {
+    const {user} = useContext(AuthContext)
     const {cover, title, review, year, rating, _id, genres, email} = high;
-    console.log(high.email);
+    // console.log(high.email);
     // console.log(high);
 
     return (
@@ -27,7 +29,7 @@ const HighRateCard = ({high}) => {
                <p className="border-t-2 w-11/12 mx-auto my-4"> </p>
                <p className='text-white/70 px-2'>{review}</p>
 
-               <Link to={`/reviews/${high._id}`} className='btn w-11/12 mx-auto text-lg hover:font-bold  flex mt-4 btn-ghost border border-white hover:border-white'>Explore Now</Link>
+               <Link to={user ? `/reviews/${high._id}` : `/login`} className='btn w-11/12 mx-auto text-lg hover:font-bold  flex mt-4 btn-ghost border border-white hover:border-white'>Explore Now</Link>
             </div>
         </div>
     );

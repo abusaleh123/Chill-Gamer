@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const AllReviewCard = ({reviews}) => {
+    const {user} =  useContext(AuthContext);
     const {cover, title, userName, email, review, rating, year, genres } = reviews;
    
 
@@ -24,7 +27,7 @@ const AllReviewCard = ({reviews}) => {
                <p className="border-t-2 w-11/12 mx-auto my-4"> </p>
                <p className='text-white/70 px-2'>{review}</p>
 
-               <Link to={`/reviews/${reviews._id}`} className='btn w-11/12 mx-auto text-lg hover:font-bold  flex mt-4 btn-ghost border border-white hover:border-white'>Explore Now</Link>
+               <Link to={user ? `/reviews/${reviews._id}` : `/login`} className='btn w-11/12 mx-auto text-lg hover:font-bold  flex mt-4 btn-ghost border border-white hover:border-white'>Explore Now</Link>
             </div>
         </div>
     );

@@ -35,7 +35,7 @@ const AddReviews = () => {
             fetch('https://chill-game-server.vercel.app/reviews', {
                 method: "POST",
                 headers: {
-                    'content-type' : 'application/json'
+                    'Content-type' : 'application/json'
                 },
                 body: JSON.stringify(newReview)
             })

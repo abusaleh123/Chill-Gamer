@@ -13,13 +13,13 @@ import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
 const UpdateReview = () => {
     const navigate = useNavigate()
    const {id} = useParams();
-   console.log(id);
+//    console.log(id);
     const updateReview = useLoaderData();
-    console.log(updateReview);
+    // console.log(updateReview);
     const [data, setData] = useState(updateReview);
-    console.log(data);
+    // console.log(data);
     
-    console.log(updateReview._id);
+    // console.log(updateReview._id);
 
     const { user } = useContext(AuthContext);
     const [rating, setRating] = useState(updateReview.rating || 0);
