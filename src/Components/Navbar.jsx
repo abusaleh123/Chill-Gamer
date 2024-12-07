@@ -4,12 +4,15 @@ import logo from "../../src/assets/fav.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
+
 // import Banner from './Banner';
 
 const Navbar = ({ toggleTheme, isDarkMode }) => {
   const { user, logOut } = useContext(AuthContext);
   const location = useLocation();
   console.log(user);
+
+
 
   const navStyle =
     location.pathname === "/addReviews"
@@ -122,7 +125,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           </div>
           <Link to={"/"} className="flex items-center">
             <img className="w-16 rounded-full" src={logo} alt="" />
-            <p className="btn btn-ghost text-4xl">Chill Game</p>
+            <p className="btn btn-ghost text-4xl"></p>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

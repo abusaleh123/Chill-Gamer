@@ -4,12 +4,13 @@ import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDbk_FMvSURirMlCBNJneD0EVulhSlfkck",
-  authDomain: "chill-game-6f6c6.firebaseapp.com",
-  projectId: "chill-game-6f6c6",
-  storageBucket: "chill-game-6f6c6.firebasestorage.app",
-  messagingSenderId: "407465257147",
-  appId: "1:407465257147:web:48ae8e36bc83072bda619e"
+ 
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

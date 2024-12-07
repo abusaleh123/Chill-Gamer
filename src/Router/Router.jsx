@@ -15,6 +15,7 @@ import MyWatchList from "../Pages/MyWatchList";
 import ErrorPage from "../Pages/ErrorPage";
 
 
+
 const router = createBrowserRouter([
     {
 path: '/',
@@ -72,7 +73,8 @@ errorElement: <ErrorPage></ErrorPage>
                      <MyWatchList></MyWatchList>
                 </PrivateRoute>,
                 loader : () => fetch('http://localhost:5000/myWatchList')
-            }
+            },
+            
         ]
     }
 ])
