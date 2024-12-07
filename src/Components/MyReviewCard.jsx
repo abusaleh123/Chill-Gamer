@@ -55,7 +55,7 @@ const handleDelete = (id) => {
     });
   };
     return (
-        <div  className=" bg-black rounded-xl">
+        <div  className=" bg-black rounded-xl ">
         
         <table className="table w-8/12 mx-auto border mb-6 ">
     {/* head */}

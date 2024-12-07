@@ -15,7 +15,7 @@ const email = user.email
   const myReview = reviewUser.filter(review => review.email === email);
   console.log(myReview);
   return (
-    <div>
+    <div className="lg:pb-28 bg-black"> 
       <div className="bg-black flex flex-col items-center lg:py-16 ">
         <h1 className="text-6xl font-semibold text-white">My Review</h1>
         <p className="text-xl mt-2">Here Is All My review that i added</p>

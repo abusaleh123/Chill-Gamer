@@ -95,7 +95,7 @@ const Register = () => {
     }
     return (
         <div style={{  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bg})`,  backgroundPosition: 'center',
-        backgroundSize: 'cover',}} className='pt-10'>
+        backgroundSize: 'cover',}} className='pt-10 lg:pb-28'>
             <div className='min-h-screen '>
             <div className="border w-8/12 mx-auto lg:min-h-screen  flex flex-col justify-center rounded-xl  backdrop-blur-md  bg-transparent ">
   <div className="hero-content flex-col  ">

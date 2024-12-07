@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const HighRateCard = ({high}) => {
-    const {cover, title, review, year, rating, _id} = high;
+    const {cover, title, review, year, rating, _id, genres} = high;
     console.log(high);
 
     return (
@@ -19,7 +19,11 @@ const HighRateCard = ({high}) => {
 
                 <p className='text-lg font-bold'>Publish Year: <span className='text-xl font-normal'>{year}</span></p>
                </div>
-               <h1 className='px-2 text-2xl font-semibold'>{title}</h1>
+               <div className="flex justify-between px-4 mt-2">
+               <h1 className=' text-2xl font-semibold'>{title}</h1>
+               <p className="text-lg">{genres}</p>
+               </div>
+               <p className="border-t-2 w-11/12 mx-auto my-4"> </p>
                <p className='text-white/70 px-2'>{review}</p>
 
                <Link to={`/reviews/${high._id}`} className='btn w-11/12 mx-auto text-lg hover:font-bold  flex mt-4 btn-ghost border border-white hover:border-white'>Explore Now</Link>

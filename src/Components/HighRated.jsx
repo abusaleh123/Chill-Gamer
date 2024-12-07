@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import HighRateCard from './HighRateCard';
-import bg from '../../src/assets/slider22.jpg'
+import bg from '../../src/assets/slider22.jpg';
 
-const HighRated = () => {
+
+const HighRated = ({isDarkMode}) => {
     const [highRate, setHighRate] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/reviews')
@@ -14,8 +15,8 @@ const HighRated = () => {
     },[])
 
     return (
-        <div style={{backgroundImage: `url(${bg})`, backgroundSize: 'cover'}} className='bg-black '>
-            <div className='flex flex-col justify-center items-center pt-12'>
+        <div style={{backgroundImage: `${isDarkMode ? "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))" : "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0))"}, url(${bg})`, backgroundSize: 'cover'}} className='bg-black '>
+            <div className='flex flex-col justify-center items-center  pt-12'>
                 <h1 className="lg:text-7xl font-bold text-white">Highest Rated Game</h1>
                 <p className='text-xl text-white/80 mt-2 mb-10'>A visually stunning open-world adventure with engaging combat, deep storytelling, rich lore, and dynamic gameplay that captivates players</p>
             </div>

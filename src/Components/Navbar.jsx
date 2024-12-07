@@ -6,7 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 // import Banner from './Banner';
 
-const Navbar = () => {
+const Navbar = ({ toggleTheme, isDarkMode }) => {
   const { user, logOut } = useContext(AuthContext);
   const location = useLocation();
   console.log(user);
@@ -55,6 +55,9 @@ const Navbar = () => {
           }
       : "absolute top-0  z-10 bg-opacity-40 ";
 
+
+      const handleHidden = location.pathname === '/' ? 'block' : 'hidden';
+
   const handleSignOut = () => {
     logOut()
       .then((result) => {
@@ -66,7 +69,7 @@ const Navbar = () => {
   };
 
   const links = [
-    <div className="text-lg flex">
+    <div className="text-lg flex ">
       <li>
         <NavLink to={"/"}>Home</NavLink>
       </li>
@@ -124,10 +127,8 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-3">
-            {/* {
-            links
-           } */}
-
+        <div className="flex gap-5 items-center justify-center">
+ 
             <NavLink className={"text-xl nav"} to={"/"}>
               Home
             </NavLink>
@@ -149,6 +150,7 @@ const Navbar = () => {
               My WatchList
             </NavLink>
             }
+            </div>
           </ul>
         </div>
         <div className="navbar-end gap-4">
@@ -188,6 +190,47 @@ const Navbar = () => {
               Login
             </Link>
           )}
+          {/* <button className="text-xl nav" onClick={toggleTheme}>
+                {isDarkMode ? "Light Mode" : "Dark Mode"}
+            </button> */}
+{/*  */}
+            <div className={`${handleHidden}`}>
+            <label className="flex cursor-pointer gap-2">
+     
+
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <input  onClick={toggleTheme} type="checkbox" value="synthwave" className={`toggle theme-controller  ${isDarkMode ? "bg-purple-500" : "bg-white"}   `} />
+  
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round">
+    <circle cx="12" cy="12" r="5" />
+    <path
+      d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+  </svg>
+
+</label>
+            </div>
+            {/*  */}
         </div>
       </div>
     </div>
