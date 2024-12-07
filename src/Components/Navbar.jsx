@@ -99,7 +99,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
         alignItems: "center",
       }}
     >
-      <div className={`navbar w-11/12 mx-auto  ${navStyle}  `}>
+      <div className={`navbar lg:w-11/12 mx-auto  ${navStyle}  `}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -127,7 +127,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           </div>
           <Link to={"/"} className="flex items-center">
             <img className="w-16 rounded-full" src={logo} alt="" />
-            <p className="btn btn-ghost text-4xl">Chill Gamer</p>
+            <p className="btn btn-ghost text-lg lg:text-4xl">Chill Gamer</p>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

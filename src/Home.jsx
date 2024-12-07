@@ -3,6 +3,8 @@ import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
 import HighRated from "./Components/HighRated";
 import Navbar from "./Components/Navbar";
+import Question from "./Components/Question";
+import TopGamers from "./Components/TopGamers";
 
 
 const Home = () => {
@@ -16,6 +18,8 @@ const Home = () => {
             <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode}></Navbar>
             <Banner isDarkMode={isDarkMode}></Banner>
             <HighRated isDarkMode={isDarkMode}></HighRated>
+            <Question isDarkMode={isDarkMode} ></Question>
+            <TopGamers isDarkMode={isDarkMode}></TopGamers>
             <Footer toggleTheme={toggleTheme} isDarkMode={isDarkMode}></Footer>
         </div>
     );
