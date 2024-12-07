@@ -15,9 +15,9 @@ const ReviewDetails = () => {
   
         const handleAddWatchList = () => {
             const newData = {email, userName, cover, title, review, year, rating,  genres};
-            console.log(newData);
+            // console.log(newData);
 
-            fetch('http://localhost:5000/watchList',{
+            fetch('https://chill-game-server.vercel.app/myWatchList',{
                 method: 'POST',
                 headers: {
                     'content-type' : 'application/json'
@@ -26,7 +26,7 @@ const ReviewDetails = () => {
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 if(data.insertedId){
                     Swal.fire({
                         icon: "success",
@@ -49,7 +49,7 @@ const ReviewDetails = () => {
                 }
             })
             .catch(error => {
-                console.log(error.message);
+                // console.log(error.message);
             })
         }
 

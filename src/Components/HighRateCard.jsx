@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HighRateCard = ({high}) => {
     const {cover, title, review, year, rating, _id, genres} = high;
-    console.log(high);
+    // console.log(high);
 
     return (
         <div className='  mx-auto ' >

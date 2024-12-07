@@ -12,11 +12,11 @@ import bg from '../../src/assets/slider22.jpg';
 const HighRated = ({isDarkMode}) => {
     const [highRate, setHighRate] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://chill-game-server.vercel.app/reviews')
         .then(res => res.json())
         .then(data => setHighRate(data))
         .catch(error => {
-            console.log(error.message);
+            // console.log(error.message);
         })
     },[])
 

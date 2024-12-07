@@ -20,7 +20,7 @@ const Register = () => {
         const email = e.target.email.value;
         const photo = e.target.photo.value
         const password = e.target.password.value
-        console.log(name, email, photo, password);
+        // console.log(name, email, photo, password);
         
 
         
@@ -42,7 +42,7 @@ const Register = () => {
 
        registerWithEmailPass(email, password) 
        .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
 
 
 
@@ -57,7 +57,7 @@ const Register = () => {
         })
         .then(res => res.json())
         .then(data => {
-          console.log(data);
+          // console.log(data);
         })
 
         updateProfiler({displayName: name, photoURL : photo})
@@ -90,7 +90,7 @@ const Register = () => {
         navigate('/')
        })
        .catch(error => {
-        console.log(error.message);
+        // console.log(error.message);
        })
     }
     return (

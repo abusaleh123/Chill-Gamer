@@ -15,6 +15,10 @@ const UpdateReview = () => {
    const {id} = useParams();
    console.log(id);
     const updateReview = useLoaderData();
+    console.log(updateReview);
+    const [data, setData] = useState(updateReview);
+    console.log(data);
+    
     console.log(updateReview._id);
 
     const { user } = useContext(AuthContext);
@@ -23,7 +27,7 @@ const UpdateReview = () => {
     const handleRatingChange = (value) => {
         setRating(value);
         // defaultValue
-        console.log("Selected rating:", rating);
+        // console.log("Selected rating:", rating);
     };
 
 
@@ -41,7 +45,7 @@ const UpdateReview = () => {
         const year = form.year.value;
 
         const updateReview = {cover, title, review, genres,  rating, year, email, username}
-        fetch(`http://localhost:5000/reviewss/${id}`, {
+        fetch(`https://chill-game-server.vercel.app/reviewss/${id}`, {
             method: "PUT",
             headers: {
               'Content-type': 'application/json',
@@ -64,7 +68,7 @@ const UpdateReview = () => {
              
             })
             .catch(error => {
-                console.log(error.message);
+                // console.log(error.message);
             })
 
 

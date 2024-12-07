@@ -14,7 +14,7 @@ const AddReviews = () => {
 
     const handleRatingChange = (value) => {
         setRating(value);
-        console.log("Selected rating:", rating);
+        // console.log("Selected rating:", rating);
     };
 
 
@@ -28,11 +28,11 @@ const AddReviews = () => {
         const email = form.email.value;
         const userName = form.username.value;
         const year = form.year.value;
-        console.log(cover, title, review, genres, email, userName, rating, year);
+        // console.log(cover, title, review, genres, email, userName, rating, year);
 
         const newReview = {cover, title, review, genres,  rating, year, email, userName}
         
-            fetch('http://localhost:5000/reviews', {
+            fetch('https://chill-game-server.vercel.app/reviews', {
                 method: "POST",
                 headers: {
                     'content-type' : 'application/json'
@@ -41,7 +41,7 @@ const AddReviews = () => {
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                if(data.insertedId){
                 Swal.fire({
                     icon: "success",
@@ -66,7 +66,7 @@ const AddReviews = () => {
              
             })
             .catch(error => {
-                console.log(error);
+                // console.log(error);
             })
 
 

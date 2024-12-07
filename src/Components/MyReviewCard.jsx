@@ -3,16 +3,16 @@ import bg from '../assets/slider11.jpg'
 import modalImg from '../assets/modal.jpg'
 import { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 
-const MyReviewCard = ({review, reviewUser}) => {
-  console.log(reviewUser);
+const MyReviewCard = ({review, reviewss, id}) => {
+
     const {user, setUser, setLoading} = useContext(AuthContext)
-const [reviews, setReviews] = useState(review);
-console.log(reviews);
-
+const [reviewssss, setReviews] = useState(reviewss);
+// console.log(reviews);
+console.log(reviewssss._id);
 const handleDelete = (id) => {
 
     Swal.fire({
@@ -28,21 +28,26 @@ const handleDelete = (id) => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Proceed with DELETE request
-        fetch(`http://localhost:5000/myReview/${reviewUser._id}`, {
+        // console.log(reviewss._id);
+        fetch(`https://chill-game-server.vercel.app/myReview/${reviewss._id}`, {
+         
           method: "DELETE"
         })
-          .then(res => res.json())
+          .then(res => {
+            // console.log(res);
+           return res.json()
+          })
           .then(data => {
-            console.log(data);
+            // console.log(data);
             // setLoading(true)
-            if (data.deletedCount) {
+            if (data?.deletedCount) {
               Swal.fire({
                 title: "Deleted!",
                 text: "Your review has been deleted.",
                 icon: "success"
               });
           
-                const remainingReviews = reviewUser.filter(rev => rev._id !== id);
+                const remainingReviews = reviewss.filter(rev => rev._id !== id);
                setUser(remainingReviews ) 
            
              
@@ -51,6 +56,9 @@ const handleDelete = (id) => {
             // const remaining = review.filter(rev => rev._id !== _id);
             //   setUser(remaining)
           })
+          .catch(error => {
+            console.log(error);
+          })
       }
     });
   };
@@ -58,7 +66,7 @@ const handleDelete = (id) => {
         <div  className=" bg-black rounded-xl ">
         
         <table className="table w-8/12 mx-auto border mb-6 ">
-    {/* head */}
+
     <thead>
       <tr className="lg:text-xl border border-white  ">
         <th className="">Image</th>
@@ -69,16 +77,16 @@ const handleDelete = (id) => {
       </tr>
     </thead>
     <tbody>
-      {/* row 1 */}
+
       <tr className="border border-white ">
-        <td className=" "><img className="lg:w-28 w-96 rounded-md" src={reviewUser.cover} alt="" /></td>
-        <td className="text-2xl text-white ">{reviewUser.title}</td>
-        <td className="text-white text-2xl">{reviewUser.rating}</td>
-        <td className="text-white text-2xl">{reviewUser.year}</td>
-        {/* {/* <td><button>Delete</button></td> */}
+        <td className=" "><img className="lg:w-28 w-96 rounded-md" src={reviewss.cover} alt="" /></td>
+        <td className="text-2xl text-white ">{reviewss.title}</td>
+        <td className="text-white text-2xl">{reviewss.rating}</td>
+        <td className="text-white text-2xl">{reviewss.year}</td>
+
        <div className="py-2">
-       <td><Link to={`/updateReview/${reviewUser._id}`}  className="btn btn-ghost border  border-white hover:border-white text-lg text-white hover:bg-purple-800">Update</Link></td> 
-       <td><button onClick={() => handleDelete(reviewUser._id)} className="btn btn-ghost border border-white hover:border-white text-lg text-white hover:bg-red-700">Delete</button></td> 
+       <td><Link to={`/updateReview/${reviewss._id}`}  className="btn btn-ghost border  border-white hover:border-white text-lg text-white hover:bg-purple-800">Update</Link></td> 
+       <td><button onClick={() => handleDelete(reviewss._id)} className="btn btn-ghost border border-white hover:border-white text-lg text-white hover:bg-red-700">Delete</button></td> 
        </div>
         
          

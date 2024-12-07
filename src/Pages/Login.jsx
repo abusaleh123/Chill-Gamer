@@ -40,7 +40,7 @@ const Login = () => {
                 },
                 buttonsStyling: true
               });
-              console.log(result);
+              // console.log(result);
       
               setUser(result);
               navigate('/')
@@ -66,7 +66,7 @@ const Login = () => {
                 },
                 buttonsStyling: true
               });
-                console.log(error.message);
+                // console.log(error.message);
             })
 
 
@@ -76,13 +76,13 @@ const Login = () => {
  const handleGoogleLogin = () => {
   googleSgnIn(auth, provider)
   .then(result => {
-    console.log(result.user);
+    // console.log(result.user);
     setUser(result)
     navigate('/')
-    console.log(user);
+    // console.log(user);
   })
   .catch(error => {
-    console.log(error.message);
+    // console.log(error.message);
   })
  }
 

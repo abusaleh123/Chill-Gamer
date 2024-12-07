@@ -10,7 +10,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 const Navbar = ({ toggleTheme, isDarkMode }) => {
   const { user, logOut } = useContext(AuthContext);
   const location = useLocation();
-  console.log(user);
+  // console.log(user);
 
 
 
@@ -64,10 +64,10 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   const handleSignOut = () => {
     logOut()
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
 

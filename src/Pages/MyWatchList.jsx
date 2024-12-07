@@ -7,9 +7,9 @@ import WatchListTable from "../Components/WatchListTable";
 const MyWatchList = () => {
     const {user} = useContext(AuthContext);
     const watchList = useLoaderData();
-    console.log(watchList);
+    // console.log(watchList);
     const [myWatchList, setMyWatchList] = useState(watchList);
-    console.log(myWatchList);
+    // console.log(myWatchList);
 
     const email = user.email;
     const newWatchList = myWatchList.filter(watch => watch.email === email);

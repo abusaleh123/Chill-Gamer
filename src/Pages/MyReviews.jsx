@@ -8,12 +8,14 @@ const MyReviews = () => {
   const {user} = useContext(AuthContext)
   const reviews = useLoaderData();
   const [reviewUser, setReviewUser] = useState(reviews);
-  console.log(reviewUser);
+  // console.log(reviewUser);
 
 
 const email = user.email
   const myReview = reviewUser.filter(review => review.email === email);
-  console.log(myReview);
+  // console.log(myReview);
+  const id = reviews._id;
+
   return (
     <div className="lg:pb-28 bg-black"> 
       <div className="bg-black flex flex-col items-center lg:py-16 ">
@@ -25,8 +27,8 @@ const email = user.email
   
      {
   myReview.length > 0 ? (
-    myReview.map(reviewUser => (
-      <MyReviewCard key={reviewUser._id} reviewUser={reviewUser} />
+    myReview.map(reviewss => (
+      <MyReviewCard key={reviewss._id} reviewss={reviewss} id={id} />
     ))
   ) : (
    <div className="py-48 border rounded-xl bg-[#A70088]">

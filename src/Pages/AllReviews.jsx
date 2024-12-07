@@ -8,7 +8,7 @@ const AllReviews = () => {
 
     const allReview = useLoaderData();
     const [reviews, setReviews] = useState(allReview)
-    console.log(allReview);
+    // console.log(allReview);
 
     const handleSort = (sortBy, ratingYear) => {
         const sortedReviews = [...reviews].sort((a, b) => {

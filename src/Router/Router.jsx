@@ -46,33 +46,33 @@ errorElement: <ErrorPage></ErrorPage>
                 element: <PrivateRoute>
                     <ReviewDetails></ReviewDetails>
                 </PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({params}) => fetch(`https://chill-game-server.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/allReviews',
                 element: <AllReviews></AllReviews>,
-                loader : () => fetch('http://localhost:5000/reviewss')
+                loader : () => fetch('https://chill-game-server.vercel.app/reviewss')
             },
             {
                 path: '/myReview',
                 element: <PrivateRoute>
                     <MyReviews></MyReviews>
                 </PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/reviewss')
+                loader: () => fetch('https://chill-game-server.vercel.app/reviewss')
             },
             {
                 path: '/updateReview/:id',
                 element: <PrivateRoute>
                     <UpdateReview></UpdateReview>
                 </PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/reviewss/${params.id}`)
+                loader: ({params}) => fetch(`https://chill-game-server.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/myWatchList',
                 element:<PrivateRoute>
                      <MyWatchList></MyWatchList>
                 </PrivateRoute>,
-                loader : () => fetch('http://localhost:5000/myWatchList')
+                loader : () => fetch('https://chill-game-server.vercel.app/myWatchList')
             },
             
         ]
