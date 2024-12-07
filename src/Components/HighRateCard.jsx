@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const HighRateCard = ({high}) => {
-    const {cover, title, review, year, rating, _id, genres} = high;
+    const {cover, title, review, year, rating, _id, genres, email} = high;
+    console.log(high.email);
     // console.log(high);
 
     return (

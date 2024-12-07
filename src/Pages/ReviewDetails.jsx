@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 import Swal from "sweetalert2";
 import modalImg from '../../src/assets/modal.jpg'
+import { useState } from "react";
 
 
 const ReviewDetails = () => {
@@ -9,13 +10,16 @@ const ReviewDetails = () => {
     // console.log(id);
     const reviewDetails = useLoaderData();
     // console.log(reviewDetails);
+    const [data, setData] = useState(reviewDetails);
+    console.log(data);
     const {cover, title, review, year, rating, _id, genres, userName, email
-    } = reviewDetails
+    } = reviewDetails;
+   
 
-  
+  console.log(email);
         const handleAddWatchList = () => {
             const newData = {email, userName, cover, title, review, year, rating,  genres};
-            // console.log(newData);
+            console.log(newData);
 
             fetch('https://chill-game-server.vercel.app/myWatchList',{
                 method: 'POST',
@@ -26,7 +30,7 @@ const ReviewDetails = () => {
             })
             .then(res => res.json())
             .then(data => {
-                // console.log(data);
+                console.log(data);
                 if(data.insertedId){
                     Swal.fire({
                         icon: "success",
@@ -49,7 +53,7 @@ const ReviewDetails = () => {
                 }
             })
             .catch(error => {
-                // console.log(error.message);
+                console.log(error.message);
             })
         }
 

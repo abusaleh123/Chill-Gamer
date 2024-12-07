@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 
 const AllReviewCard = ({reviews}) => {
-    const {cover, title, useName, email, review, rating, year, genres } = reviews;
+    const {cover, title, userName, email, review, rating, year, genres } = reviews;
+   
 
     return ( 
         <div>
