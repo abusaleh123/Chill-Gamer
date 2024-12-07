@@ -1,11 +1,51 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import question from '../assets/question.jpg'
+import {  Cursor, Typewriter, useTypewriter } from 'react-simple-typewriter';
 
 const Question = ({isDarkMode}) => {
+    const [text, setText] = useState("");
+  const words = ["Explore the Chill Game", "Ask Question", "You want to know"];
+  const [index, setIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [charIndex, setCharIndex] = useState(0);
+  const speed = 100; 
+  const deleteSpeed = 40; 
+
+  useEffect(() => {
+    const handleTyping = () => {
+      if (isDeleting) {
+        if (charIndex > 0) {
+          setCharIndex(charIndex - 1);
+        } else {
+          setIsDeleting(false);
+          setIndex((prevIndex) => (prevIndex + 1) % words.length);
+        }
+      } else {
+        if (charIndex < words[index].length) {
+          setCharIndex(charIndex + 1);
+        } else {
+          setIsDeleting(true);
+        }
+      }
+    };
+
+    const timer = setInterval(handleTyping, isDeleting ? deleteSpeed : speed);
+
+    return () => clearInterval(timer);
+  }, [charIndex, isDeleting, index, words]);
+
+  useEffect(() => {
+    setText(words[index].slice(0, charIndex));
+  }, [charIndex, index, words]);
     return (
         <div className={` lg:pt-20 mx-auto ${isDarkMode ? "bg-black text-white" : "bg-gray-400"}`}>
             <div className={`flex justify-center flex-col items-center text-center space-y-2 lg:w-10/12 mx-auto  ${isDarkMode ? " text-white" : "text-black"}`}>
-                <h1 className="lg:text-6xl text-2xl mt-6 font-bold">Explore the Chill Game</h1>
+                <h1 className="lg:text-6xl lg:h-14 h-8 text-2xl mt-6 font-bold">
+              
+                    
+             {text}
+           
+                    </h1>
                 <p className="lg:text-xl">This section allows users to dive into the world of gaming through game reviews, ratings, and recommendations. It features top-rated games, recent reviews, and personalized game suggestions. Users can explore detailed game information, read community reviews, and share their gaming experiences. With an intuitive and chill design, this section ensures a fun and interactive game discovery journey.</p>
             </div>
 <div className="grid grid-cols-1 items-center  md:grid-cols-2 py-20 w-10/12  mx-auto">

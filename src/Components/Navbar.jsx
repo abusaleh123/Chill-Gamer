@@ -73,19 +73,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       });
   };
 
-  const links = [
-    <div className="text-lg flex ">
-      <li>
-        <NavLink to={"/"}>Home</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/hello"}>All Reviews</NavLink>
-      </li>
-      <li>
-        <a>Item 3</a>
-      </li>
-    </div>,
-  ];
+
   return (
     <div
       className=""
@@ -120,13 +108,76 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content flex flex-col bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              {links}
+           <li>
+        <NavLink className={"text-xl nav"} to={"/"}>Home</NavLink>
+      </li>
+      <li>
+        <NavLink className={"text-xl nav"} to={"/allReviews"}>All Reviews</NavLink>
+      </li>
+      <li>
+      {user && (
+              <NavLink className={"text-xl nav"} to={"/addReviews"}>
+                Add Reviews
+              </NavLink>
+            )}
+      </li>
+      <li>
+      {
+              user && <NavLink className={"text-xl nav"} to={"/myReview"}>
+              My Reviews
+            </NavLink>
+            }
+      </li>
+      <li>
+      {
+              user && <NavLink className={"text-xl nav"} to={"/myWatchList"}>
+              My WatchList
+            </NavLink>
+            }
+      </li>
+
+      <div className={`${handleHidden} `}>
+            <label className="flex cursor-pointer gap-2">
+     
+
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <input  onClick={toggleTheme} type="checkbox" value="synthwave" className={`toggle theme-controller  ${isDarkMode ? "bg-purple-500" : "bg-white"}   `} />
+  
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round">
+    <circle cx="12" cy="12" r="5" />
+    <path
+      d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+  </svg>
+
+</label>
+            </div>
             </ul>
           </div>
           <Link to={"/"} className="flex items-center">
-            <img className="w-16 rounded-full" src={logo} alt="" />
+            <img className="lg:w-16 w-10 rounded-full" src={logo} alt="" />
             <p className="btn btn-ghost text-lg lg:text-4xl">Chill Gamer</p>
           </Link>
         </div>
@@ -166,7 +217,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
                 data-tip={user?.displayName}
               >
                 <img
-                  className="w-10 h-10 rounded-full cursor-pointer"
+                  className="md:w-10 md:h-10 w-8 h-8 object-cover rounded-full cursor-pointer"
                   src={user.photoURL}
                   alt="Profile"
                 />
@@ -200,7 +251,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
                 {isDarkMode ? "Light Mode" : "Dark Mode"}
             </button> */}
 {/*  */}
-            <div className={`${handleHidden}`}>
+            <div className={`${handleHidden} hidden md:block`}>
             <label className="flex cursor-pointer gap-2">
      
 
