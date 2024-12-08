@@ -3,6 +3,7 @@ import bg from "../../src/assets/bg.jpg";
 import logo from "../../src/assets/fav.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { Fade } from "react-awesome-reveal";
 
 
 // import Banner from './Banner';
@@ -75,6 +76,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
 
 
   return (
+
     <div
       className=""
       style={{
@@ -87,7 +89,9 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
         alignItems: "center",
       }}
     >
+          
       <div className={`navbar lg:w-11/12 mx-auto  ${navStyle}  `}>
+
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -209,7 +213,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             </div>
           </ul>
         </div>
-        <div className="navbar-end gap-4">
+        <div className="navbar-end md:gap-4 gap-1">
           {user ? (
             <>
               <div
@@ -289,6 +293,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             </div>
             {/*  */}
         </div>
+
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ import {  Scrollbar, A11y, EffectCube, Autoplay } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 
 import { Navigation, Pagination } from 'swiper/modules';
+import { Fade } from 'react-awesome-reveal';
 
 const Banner = ({isDarkMode}) => {
   return (
@@ -24,7 +25,7 @@ const Banner = ({isDarkMode}) => {
     spaceBetween={0}
     slidesPerView={1}
     autoplay={{
-      delay: 2500, 
+      delay: 2500,     
       disableOnInteraction: false,
       
     }}
@@ -38,14 +39,17 @@ const Banner = ({isDarkMode}) => {
     backgroundSize: 'cover',}} className=' flex justify-center  relative items-center my-auto  mx-auto'>
 {/* <img className="w-screen h-screen object-cover relative" src={slider1} alt="" /> */}
 <div >
-
+<Fade>
      <div className='flex flex-col justify-center items-center min-h-screen'>
-     <h1 className={`${isDarkMode ? 'text-white ' : 'text-[#FFA500]'} lg:mb-8 text-2xl lg:text-6xl font-bold w-2/4 text-center `}>The Best Game Reviews for Every Genre, Platform, and Player</h1>
+
+<h1 className={`${isDarkMode ? 'text-white ' : 'text-[#FFA500]'} lg:mb-8 text-2xl lg:text-6xl font-bold w-2/4 text-center `}>The Best Game Reviews for Every Genre, Platform, and Player</h1>
+
     
       <p className='lg:w-3/4 text-center  text-[#969692] font-semibold lg:mb-10 lg:text-lg lg:tracking-normal lg:leading-8'>Your go-to source for game reviews tailored to your preferences. Explore diverse genres and platforms with detailed critiques and ratings to ensure your next game is a perfect match.</p>
     
    
      </div>
+     </Fade>
       </div>
  
 

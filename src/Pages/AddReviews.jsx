@@ -73,7 +73,7 @@ const AddReviews = () => {
     }
 
     return (
-        <div style={{backgroundImage: `url(${bg})` , backgroundSize: 'cover'}} className="bg-transparent text-white  min-h-screen flex items-center justify-center">
+        <div style={{backgroundImage: `url(${bg})` , backgroundSize: 'cover'}} className="bg-transparent text-white py-10 lg:py-0  min-h-screen flex items-center justify-center">
             <div className="w-full lg:w-8/12 border border-white-600 backdrop-blur-xl p-8 rounded-lg shadow-lg">
                 <form onSubmit={handleAddReview} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <h2 className="lg:text-5xl text-white  rounded-xl   font-bold text-center col-span-1 md:col-span-2 mb-4">
@@ -96,7 +96,7 @@ const AddReviews = () => {
                     </div>
                     
                     {/* Game Title */}
-                    <div className="col-span-1">
+                    <div className="md:col-span-1 col-span-2">
                         <label htmlFor="title" className="block mb-2">
                             Game Title:
                         </label>
@@ -111,7 +111,7 @@ const AddReviews = () => {
                     </div>
 
                     {/* Review Description */}
-                    <div className="col-span-1 md:col-span-1">
+                    <div className="md:col-span-1 col-span-2">
                         <label htmlFor="review" className="block mb-2">
                             Review Description:
                         </label>
@@ -126,7 +126,7 @@ const AddReviews = () => {
                     </div>
 
                     {/* Rating */}
-                    <div className="col-span-1  gap-2 items-center  ">
+                    <div className="md:col-span-1 col-span-2  gap-2 items-center  ">
       <label  className="block  mb-2">
         Rating (1-5):
       </label>
@@ -145,7 +145,7 @@ const AddReviews = () => {
     </div>
 
                     {/* Publishing Year */}
-                    <div className="col-span-1">
+                    <div className="md:col-span-1 col-span-2">
                         <label htmlFor="year" className="block mb-2">
                             Publishing Year:
                         </label>
@@ -161,7 +161,7 @@ const AddReviews = () => {
                     </div>
 
                     {/* Genres */}
-                    <div className="col-span-1">
+                    <div className="md:col-span-1 col-span-2">
                         <label htmlFor="genres" className="block mb-2">
                             Genres:
                         </label>
@@ -180,7 +180,7 @@ const AddReviews = () => {
                     </div>
 
                     {/* User Email */}
-                    <div className="col-span-1">
+                    <div className="md:col-span-1 col-span-2">
                         <label htmlFor="email" className="block mb-2">
                             User Email:
                         </label>
@@ -195,7 +195,7 @@ const AddReviews = () => {
                     </div>
 
                     {/* User Name */}
-                    <div className="col-span-1">
+                    <div className="md:col-span-1 col-span-2">
                         <label htmlFor="username" className="block mb-2">
                             User Name:
                         </label>
@@ -213,7 +213,7 @@ const AddReviews = () => {
                     <div className="col-span-1 md:col-span-2">
                         <button
                             type="submit"
-                            className="w-full btn btn-ghost border-white   text-lg font-bold py-2 rounded hover:border transition"
+                            className="w-full mx-auto  btn btn-ghost border-white text-md  md:text-lg font-bold py-2 rounded hover:border transition"
                         >
                             Submit Review
                         </button>

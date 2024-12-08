@@ -8,7 +8,7 @@ import avatar6 from '../assets/avatar6.jpeg'
 import { Link } from "react-router-dom";
 const TopGamers = ({isDarkMode}) => {
   return (
-    <section className={`${isDarkMode ? 'bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 py-16 px-8' : 'bg-white/50'} pb-16`}>
+    <section className={`${isDarkMode ? 'bg-gradient-to-r from-black via-gray-900  to-black py-16 px-8' : 'bg-white/50'} pb-16`}>
       <div className="text-center mt-6 md:mt-20">
         <h2 className={`md:text-6xl text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-black'} mb-4`}>Player’s Spotlight</h2>
         <p className={` md:text-xl  ${isDarkMode ? 'text-gray-300' : 'text-black'} text-lg`}>

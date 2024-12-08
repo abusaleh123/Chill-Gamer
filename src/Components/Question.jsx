@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import question from '../assets/question.jpg'
 import {  Cursor, Typewriter, useTypewriter } from 'react-simple-typewriter';
+import { Flip, Zoom } from 'react-awesome-reveal';
 
 const Question = ({isDarkMode}) => {
     const [text, setText] = useState("");
@@ -144,9 +145,11 @@ const Question = ({isDarkMode}) => {
 </div>
         </div>
 
-        <div>
+  <Zoom>
+  <div>
    <img className='rounded-xl ' src={question} alt="" />
 </div>
+  </Zoom>
 </div>
         </div>
     );
