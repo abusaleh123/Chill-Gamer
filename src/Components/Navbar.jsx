@@ -180,9 +180,9 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             </div>
             </ul>
           </div>
-          <Link to={"/"} className="flex items-center">
+          <Link to={"/"} className="flex gap-0 items-center">
             <img className="lg:w-16 w-10 rounded-full" src={logo} alt="" />
-            <p className="btn btn-ghost text-lg lg:text-4xl">Chill Gamer</p>
+            <p className="btn btn-ghost text-md lg:text-4xl">Chill Gamer</p>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -271,7 +271,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
     strokeLinejoin="round">
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
   </svg>
-  <input  onClick={toggleTheme} type="checkbox" value="synthwave" className={`toggle theme-controller  ${isDarkMode ? "bg-purple-500" : "bg-white"}   `} />
+  <input  onClick={toggleTheme} type="checkbox" value="synthwave" className={`toggle theme-controller hidden md:block  ${isDarkMode ? "bg-purple-500" : "bg-white "}   `} />
   
   <svg
     xmlns="http://www.w3.org/2000/svg"
