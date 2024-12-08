@@ -61,7 +61,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       : "absolute top-0  z-10 bg-opacity-40 ";
 
 
-      const handleHidden = location.pathname === '/' ? 'block' : 'hidden';
+      const handleHidden = location.pathname === "/" ? 'inline-block' : 'hidden';
 
   const handleSignOut = () => {
     logOut()
@@ -142,7 +142,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             }
       </li>
 
-      <div className={`${handleHidden} `}>
+      <div className={``}>
             <label className="flex cursor-pointer gap-2">
      
 
@@ -251,11 +251,9 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
               Login
             </Link>
           )}
-          {/* <button className="text-xl nav" onClick={toggleTheme}>
-                {isDarkMode ? "Light Mode" : "Dark Mode"}
-            </button> */}
-{/*  */}
-            <div className={`${handleHidden} hidden md:block`}>
+   
+
+            <div className={`${handleHidden}   `}>
             <label className="flex cursor-pointer gap-2">
      
 
@@ -266,6 +264,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
     height="20"
     viewBox="0 0 24 24"
     fill="none"
+   className="hidden md:block"
     stroke="currentColor"
     strokeWidth="2"
     strokeLinecap="round"
@@ -280,6 +279,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
     height="20"
     viewBox="0 0 24 24"
     fill="none"
+      className="hidden md:block"
     stroke="currentColor"
     strokeWidth="2"
     strokeLinecap="round"

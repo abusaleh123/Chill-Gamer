@@ -34,10 +34,11 @@ const AllReviews = () => {
       // Get unique genres from the reviews data
       const genres = Array.from(new Set(allReview.map((review) => review.genres)));
     return (
-        <div style={{backgroundImage: `url(${bg})`, backgroundSize: 'cover' }} className="min-h-screen lg:pb-28">
+        <div style={{  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bg})`,  backgroundPosition: 'center',
+        backgroundSize: 'cover',}}className="min-h-screen pb-10 lg:pb-28">
            <div className="flex flex-col items-center "> 
-            <h1 className="lg:text-7xl text-white mt-12">All Reviews</h1>
-            <p className="text-xl text-white/80 mt-2">The All Reviews page showcases a collection of user reviews, featuring game titles, ratings, genres, and summaries, allowing users to explore and evaluate various reviews in one place.</p>
+            <h1 className="lg:text-7xl text-2xl text-white mt-12">All Reviews</h1>
+            <p className="text-xl text-white/80 text-center mt-2">The All Reviews page showcases a collection of user reviews, featuring game titles, ratings, genres, and summaries, allowing users to explore and evaluate various reviews in one place.</p>
            </div>
 
 

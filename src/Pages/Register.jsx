@@ -48,7 +48,7 @@ const Register = () => {
 
         const createdAt = result?.user?.metadata?.creationTime;
         const newUser = {name,email, photo, createdAt}
-        fetch('http://localhost:5000/users', {
+        fetch('https://chill-game-server.vercel.app/users', {
           method: "POST",
           headers: {
             'content-type' : 'application/json'

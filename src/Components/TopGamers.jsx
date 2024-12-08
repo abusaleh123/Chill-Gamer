@@ -6,6 +6,7 @@ import avatar4 from '../assets/avatar3.jpeg'
 import avatar5 from '../assets/avatar5.jpeg'
 import avatar6 from '../assets/avatar6.jpeg'
 import { Link } from "react-router-dom";
+import { Bounce, Zoom } from "react-awesome-reveal";
 const TopGamers = ({isDarkMode}) => {
   return (
     <section className={`${isDarkMode ? 'bg-gradient-to-r from-black via-gray-900  to-black py-16 px-8' : 'bg-white/50'} pb-16`}>
@@ -18,7 +19,7 @@ const TopGamers = ({isDarkMode}) => {
 
   
       <div className="grid w-10/12 mx-auto grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 mt-10">
-        
+        <Zoom>
         <div className={`border  rounded-lg shadow-lg p-6 hover:scale-105 ${isDarkMode ? '' : 'backdrop-blur-xl bg-white/10'} transform transition duration-300`}>
           <img
             src={avatar1}
@@ -39,7 +40,8 @@ const TopGamers = ({isDarkMode}) => {
             View Profile
           </button>
         </div>
-
+        </Zoom>
+<Zoom>
         <div className={`border  rounded-lg shadow-lg p-6 hover:scale-105 ${isDarkMode ? '' : 'backdrop-blur-xl bg-white/10'} transform transition duration-300`}>
           <img
             src={avatar2}
@@ -60,6 +62,8 @@ const TopGamers = ({isDarkMode}) => {
             View Profile
           </button>
         </div>
+        </Zoom>
+        <Zoom>
 
         <div className={`border  rounded-lg shadow-lg p-6 hover:scale-105 ${isDarkMode ? '' : 'backdrop-blur-xl bg-white/10'} transform transition duration-300`}>
           <img
@@ -81,7 +85,8 @@ const TopGamers = ({isDarkMode}) => {
             View Profile
           </button>
         </div>
-
+        </Zoom>
+<Zoom>
         <div className={`border  rounded-lg shadow-lg p-6 hover:scale-105 ${isDarkMode ? '' : 'backdrop-blur-xl bg-white/10'} transform transition duration-300`}>
           <img
             src={avatar4}
@@ -98,7 +103,8 @@ const TopGamers = ({isDarkMode}) => {
             View Profile
           </button>
         </div>
-
+        </Zoom>
+        <Zoom>
     
         <div className={`border  rounded-lg shadow-lg p-6 hover:scale-105 ${isDarkMode ? '' : 'backdrop-blur-xl bg-white/10'} transform transition duration-300`}>
           <img
@@ -116,7 +122,8 @@ const TopGamers = ({isDarkMode}) => {
             View Profile
           </button>
         </div>
-
+        </Zoom>
+        <Zoom>
    
         <div className={`border  rounded-lg shadow-lg p-6 hover:scale-105 ${isDarkMode ? '' : 'backdrop-blur-xl bg-white/10'} transform transition duration-300`}>
           <img
@@ -134,8 +141,8 @@ const TopGamers = ({isDarkMode}) => {
             View Profile
           </button>
         </div>
-
-
+        </Zoom>
+<Zoom>
         <div className={`border  rounded-lg shadow-lg p-6 hover:scale-105 ${isDarkMode ? '' : 'backdrop-blur-xl bg-white/10'} transform transition duration-300`}>
           <img
             src={avatar1}
@@ -152,7 +159,8 @@ const TopGamers = ({isDarkMode}) => {
             View Profile
           </button>
         </div>
-
+        </Zoom>
+        <Zoom>
 
         <div className={`border  rounded-lg shadow-lg p-6 hover:scale-105 ${isDarkMode ? '' : 'backdrop-blur-xl bg-white/10'} transform transition duration-300`}>
           <img
@@ -170,6 +178,8 @@ const TopGamers = ({isDarkMode}) => {
             View Profile
           </button>
         </div>
+        </Zoom>
+<Zoom>
 
 
         <div className={`border  rounded-lg shadow-lg p-6 hover:scale-105 ${isDarkMode ? '' : 'backdrop-blur-xl bg-white/10'} transform transition duration-300`}>
@@ -188,6 +198,7 @@ const TopGamers = ({isDarkMode}) => {
             View Profile
           </button>
         </div>
+        </Zoom>
 
 
 

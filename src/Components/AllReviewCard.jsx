@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { Zoom } from "react-awesome-reveal";
 
 
 const AllReviewCard = ({reviews}) => {
@@ -10,7 +11,8 @@ const AllReviewCard = ({reviews}) => {
 
     return ( 
         <div>
-            <div className='bg-white/20 backdrop-blur-md  pb-6 rounded-xl h-full text-white'>
+            <Zoom>
+            <div className='bg-white/20 backdrop-blur-md   pb-6 rounded-xl h-full text-white'>
                 <img className=' object-cover rounded-t-xl' src={cover} alt="" />
                <div className='flex justify-between px-4 mt-2'>
                <div className="flex items-center gap-2">
@@ -29,6 +31,7 @@ const AllReviewCard = ({reviews}) => {
 
                <Link to={user ? `/reviews/${reviews._id}` : `/login`} className='btn w-11/12 mx-auto text-lg hover:font-bold  flex mt-4 btn-ghost border border-white hover:border-white'>Explore Now</Link>
             </div>
+            </Zoom>
         </div>
     );
 };

@@ -11,14 +11,14 @@ const MyWatchList = () => {
     const [myWatchList, setMyWatchList] = useState(watchList);
     // console.log(myWatchList);
 
-    const email = user.email;
-    console.log(email);
-    const newWatchList = myWatchList.filter(watch => watch.email == email);
+    // const emaill = user.email;
+    // console.log(emaill);
+    const newWatchList = watchList.filter(watch => watch.userEmail === user.email);
 
     return (
-        <div>
+        <div className="">
 
-<div className="bg-black flex flex-col items-center lg:py-16 ">
+<div className="bg-black flex flex-col items-center py-12 lg:py-16 ">
         <h1 className="text-6xl font-semibold text-white">My Watch List</h1>
         <p className="text-xl mt-2">Here Is All My watch List that I added</p>
       </div>

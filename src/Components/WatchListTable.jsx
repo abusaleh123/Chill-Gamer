@@ -1,10 +1,11 @@
 import React from 'react';
+import { Zoom } from 'react-awesome-reveal';
 
 const WatchListTable = ({watchListAdd}) => {
     return (
-        <div  className=" bg-black rounded-xl">
-        
-        <table className="table w-8/12 mx-auto border mb-6 ">
+        <div  className=" bg-black rounded-xl pb-10">
+        <Zoom>
+        <table className="table w-11/12 md:w-8/12 mx-auto border pb-6 ">
     {/* head */}
     <thead>
       <tr className="lg:text-xl border border-white  ">
@@ -30,6 +31,7 @@ const WatchListTable = ({watchListAdd}) => {
     
     </tbody>
   </table>
+  </Zoom>
       </div>
     );
 };

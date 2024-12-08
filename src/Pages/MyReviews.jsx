@@ -17,8 +17,8 @@ const email = user.email
   const id = reviews._id;
 
   return (
-    <div className="lg:pb-28 bg-black"> 
-      <div className="bg-black flex flex-col items-center lg:py-16 ">
+    <div className="lg:pb-28  bg-black"> 
+      <div className="bg-black mb-10 pt-6   flex flex-col text-center items-center lg:py-16 ">
         <h1 className="text-6xl font-semibold text-white">My Review</h1>
         <p className="text-xl mt-2">Here Is All My review that i added</p>
       </div>

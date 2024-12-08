@@ -8,6 +8,7 @@ import bg from '../../src/assets/addreviewbg.jpg';
 import modalImg from '../../src/assets/modal.jpg'
 import Swal from 'sweetalert2';
 import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
+import { Zoom } from 'react-awesome-reveal';
 
 
 const UpdateReview = () => {
@@ -79,8 +80,9 @@ const UpdateReview = () => {
 
 
     return (
-        <div style={{backgroundImage: `url(${bg})` , backgroundSize: 'cover'}} className="bg-transparent text-white  min-h-screen flex items-center justify-center">
-        <div className="w-full lg:w-8/12 border border-white-600 backdrop-blur-xl p-8 rounded-lg shadow-lg">
+        <div style={{backgroundImage: `url(${bg})` , backgroundSize: 'cover'}} className="bg-transparent text-white py-10 min-h-screen flex items-center justify-center">
+            <Zoom className="w-full lg:w-8/12 border border-white-600 backdrop-blur-xl p-8 rounded-lg shadow-lg">
+        <div >
             <form onSubmit={handleUpdateReview} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <h2 className="lg:text-5xl text-white  rounded-xl   font-bold text-center col-span-1 md:col-span-2 mb-4">
                     Update Review Form
@@ -103,7 +105,7 @@ const UpdateReview = () => {
                 </div>
                 
                 {/* Game Title */}
-                <div className="col-span-1">
+                <div className="md:col-span-1 col-span-2">
                     <label htmlFor="title" className="block mb-2">
                         Game Title:
                     </label>
@@ -119,7 +121,7 @@ const UpdateReview = () => {
                 </div>
 
                 {/* Review Description */}
-                <div className="col-span-1 md:col-span-1">
+                <div className="md:col-span-1 col-span-2">
                     <label htmlFor="review" className="block mb-2">
                         Review Description:
                     </label>
@@ -134,7 +136,7 @@ const UpdateReview = () => {
                 </div>
 
                 {/* Rating */}
-                <div className="col-span-1  gap-2 items-center  ">
+                <div className="md:col-span-1 col-span-2  gap-2 items-center  ">
   <label  className="block  mb-2">
     Rating (1-5):
   </label>
@@ -153,7 +155,7 @@ const UpdateReview = () => {
 </div>
 
                 {/* Publishing Year */}
-                <div className="col-span-1">
+                <div className="md:col-span-1 col-span-2">
                     <label htmlFor="year" className="block mb-2">
                         Publishing Year:
                     </label>
@@ -170,7 +172,7 @@ const UpdateReview = () => {
                 </div>
 
                 {/* Genres */}
-                <div className="col-span-1">
+                <div className="md:col-span-1 col-span-2">
                     <label htmlFor="genres" className="block mb-2">
                         Genres:
                     </label>
@@ -189,7 +191,7 @@ const UpdateReview = () => {
                 </div>
 
                 {/* User Email */}
-                <div className="col-span-1">
+                <div className="md:col-span-1 col-span-2">
                     <label htmlFor="email" className="block mb-2">
                         User Email:
                     </label>
@@ -204,7 +206,7 @@ const UpdateReview = () => {
                 </div>
 
                 {/* User Name */}
-                <div className="col-span-1">
+                <div className="md:col-span-1 col-span-2">
                     <label htmlFor="username" className="block mb-2">
                         User Name:
                     </label>
@@ -229,6 +231,7 @@ const UpdateReview = () => {
                 </div>
             </form>
         </div>
+        </Zoom>
     </div>
     );
 };

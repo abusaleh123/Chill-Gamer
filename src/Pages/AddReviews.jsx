@@ -7,6 +7,7 @@ import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
 import bg from '../../src/assets/addreviewbg.jpg';
 import modalImg from '../../src/assets/modal.jpg'
 import Swal from 'sweetalert2';
+import { Zoom } from 'react-awesome-reveal';
 
 const AddReviews = () => {
     const { user } = useContext(AuthContext);
@@ -74,7 +75,8 @@ const AddReviews = () => {
 
     return (
         <div style={{backgroundImage: `url(${bg})` , backgroundSize: 'cover'}} className="bg-transparent text-white py-10 lg:py-0  min-h-screen flex items-center justify-center">
-            <div className="w-full lg:w-8/12 border border-white-600 backdrop-blur-xl p-8 rounded-lg shadow-lg">
+            <Zoom className="w-full lg:w-8/12 border border-white-600 backdrop-blur-xl p-8 rounded-lg shadow-lg">
+            <div >
                 <form onSubmit={handleAddReview} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <h2 className="lg:text-5xl text-white  rounded-xl   font-bold text-center col-span-1 md:col-span-2 mb-4">
                         Game Review Form
@@ -168,14 +170,16 @@ const AddReviews = () => {
                         <select
                             id="genres"
                             name="genres"
-                            className="w-full p-2 border-2 border-gray-500 rounded bg-white/20   text-black hover:border-red-500 focus:border-red-500 focus:outline-none"
+                            className="w-full p-2 border-2 border-gray-500 rounded bg-white/20   text-white hover:border-red-500 focus:border-red-500 focus:outline-none"
                             required
                         >
-                            <option value="Action">Action</option>
-                            <option value="RPG">RPG</option>
-                            <option value="Adventure">Adventure</option>
-                            <option value="Puzzle">Puzzle</option>
-                            <option value="Sports">Sports</option>
+                            <option className='text-black' value="Action">Action</option>
+                            <option className='text-black' value="RPG">RPG</option>
+                            <option className='text-black' value="Adventure">Adventure</option>
+                            <option className='text-black' value="Puzzle">Puzzle</option>
+                            <option className='text-black' value="Sports">Sports</option>
+                            <option className='text-black' value="Racing">Racing</option>
+                            <option className='text-black' value="Run">Run</option>
                         </select>
                     </div>
 
@@ -220,6 +224,7 @@ const AddReviews = () => {
                     </div>
                 </form>
             </div>
+            </Zoom>
         </div>
     );
 };

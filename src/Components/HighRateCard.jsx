@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
+import { Fade, Zoom } from 'react-awesome-reveal';
 
 const HighRateCard = ({high}) => {
     const {user} = useContext(AuthContext)
@@ -12,6 +13,7 @@ const HighRateCard = ({high}) => {
         <div className='  mx-auto ' >
           
             {/* Card */}
+            <Zoom>
             <div className='bg-white/20 backdrop-blur-md  pb-6 rounded-xl h-full text-white'>
                 <img className=' object-cover rounded-t-xl' src={cover} alt="" />
                <div className='flex justify-between px-4 mt-2'>
@@ -31,6 +33,7 @@ const HighRateCard = ({high}) => {
 
                <Link to={user ? `/reviews/${high._id}` : `/login`} className='btn w-11/12 mx-auto text-lg hover:font-bold  flex mt-4 btn-ghost border border-white hover:border-white'>Explore Now</Link>
             </div>
+            </Zoom>
         </div>
     );
 };

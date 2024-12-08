@@ -15,7 +15,7 @@ import {  Scrollbar, A11y, EffectCube, Autoplay } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 
 import { Navigation, Pagination } from 'swiper/modules';
-import { Fade } from 'react-awesome-reveal';
+import { Fade, Zoom } from 'react-awesome-reveal';
 
 const Banner = ({isDarkMode}) => {
   return (
@@ -39,7 +39,7 @@ const Banner = ({isDarkMode}) => {
     backgroundSize: 'cover',}} className=' flex justify-center  relative items-center my-auto  mx-auto'>
 {/* <img className="w-screen h-screen object-cover relative" src={slider1} alt="" /> */}
 <div >
-<Fade>
+<Zoom>
      <div className='flex flex-col justify-center items-center min-h-screen'>
 
 <h1 className={`${isDarkMode ? 'text-white ' : 'text-[#FFA500]'} lg:mb-8 text-2xl lg:text-6xl font-bold w-2/4 text-center `}>The Best Game Reviews for Every Genre, Platform, and Player</h1>
@@ -49,7 +49,7 @@ const Banner = ({isDarkMode}) => {
     
    
      </div>
-     </Fade>
+     </Zoom>
       </div>
  
 
@@ -58,7 +58,7 @@ const Banner = ({isDarkMode}) => {
     backgroundSize: 'cover',}} className=''>
 {/* <img className="w-screen h-screen object-cover relative" src={slider1} alt="" /> */}
 <div >
-
+<Zoom>
      <div className='flex flex-col justify-center items-center w-full min-h-screen'> 
      <h1 className={`${isDarkMode ? 'text-white ' : 'text-[#FFA500]'} lg:mb-8 text-2xl lg:text-6xl font-bold w-2/4 text-center`}>Explore, Review, and Play: Your Ultimate Gaming Companion Hub</h1>
     
@@ -66,6 +66,8 @@ const Banner = ({isDarkMode}) => {
     
    
      </div>
+     </Zoom>
+
       </div>
  
 
@@ -74,7 +76,7 @@ const Banner = ({isDarkMode}) => {
     backgroundSize: 'cover',}} >
 {/* <img className="w-screen h-screen object-cover relative" src={slider1} alt="" /> */}
 <div className=' '>
-
+<Zoom>
      <div className='flex flex-col justify-center items-center w-full min-h-screen'>
      <h1 className={`${isDarkMode ? 'text-white ' : 'text-[#FFA500]'}  lg:mb-8 text-2xl lg:text-6xl font-bold w-2/4 text-center`}>Unbiased Game Reviews for Gamers on Every Platform Worldwide</h1>
      
@@ -82,6 +84,8 @@ const Banner = ({isDarkMode}) => {
     
    
      </div>
+     </Zoom>
+
       </div>
  
 
