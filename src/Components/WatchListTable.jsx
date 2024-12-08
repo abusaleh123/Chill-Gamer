@@ -6,7 +6,7 @@ const WatchListTable = ({watchListAdd}) => {
         <div  className=" bg-black rounded-xl pb-10">
         <Zoom>
         <table className="table w-11/12 md:w-8/12 mx-auto border pb-6 ">
-    {/* head */}
+   
     <thead>
       <tr className="lg:text-xl border border-white  ">
         <th className="">Image</th>
@@ -17,7 +17,7 @@ const WatchListTable = ({watchListAdd}) => {
       </tr>
     </thead>
     <tbody>
-      {/* row 1 */}
+    
       <tr className="border border-white ">
         <td className=" "><img className="lg:w-28 w-96 rounded-md" src={watchListAdd.cover} alt="" /></td>
         <td className="text-2xl text-white ">{watchListAdd.title}</td>

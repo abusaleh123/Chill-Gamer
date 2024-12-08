@@ -5,6 +5,7 @@ import HighRated from "./Components/HighRated";
 import Navbar from "./Components/Navbar";
 import Question from "./Components/Question";
 import TopGamers from "./Components/TopGamers";
+import { Helmet } from "react-helmet";
 
 
 const Home = () => {
@@ -15,6 +16,11 @@ const Home = () => {
     }
     return (
         <div className={`App ${isDarkMode ? "light" : "dark"}`}>
+               <Helmet>
+             
+                <title>Chill Gamer || Home</title>
+               
+            </Helmet>
             <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode}></Navbar>
             <Banner isDarkMode={isDarkMode}></Banner>
             <HighRated isDarkMode={isDarkMode}></HighRated>

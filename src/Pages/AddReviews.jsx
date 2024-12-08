@@ -8,6 +8,7 @@ import bg from '../../src/assets/addreviewbg.jpg';
 import modalImg from '../../src/assets/modal.jpg'
 import Swal from 'sweetalert2';
 import { Zoom } from 'react-awesome-reveal';
+import { Helmet } from 'react-helmet';
 
 const AddReviews = () => {
     const { user } = useContext(AuthContext);
@@ -75,6 +76,11 @@ const AddReviews = () => {
 
     return (
         <div style={{backgroundImage: `url(${bg})` , backgroundSize: 'cover'}} className="bg-transparent text-white py-10 lg:py-0  min-h-screen flex items-center justify-center">
+              <Helmet>
+             
+             <title>Chill Gamer || Add Review</title>
+            
+         </Helmet>
             <Zoom className="w-full lg:w-8/12 border border-white-600 backdrop-blur-xl p-8 rounded-lg shadow-lg">
             <div >
                 <form onSubmit={handleAddReview} className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -82,7 +88,7 @@ const AddReviews = () => {
                         Game Review Form
                     </h2>
 
-                    {/* Game Cover Image */}
+           
                     <div className="col-span-2">
                         <label htmlFor="cover" className="block mb-2">
                             Game Cover Image (URL):
@@ -97,7 +103,7 @@ const AddReviews = () => {
                         />
                     </div>
                     
-                    {/* Game Title */}
+       
                     <div className="md:col-span-1 col-span-2">
                         <label htmlFor="title" className="block mb-2">
                             Game Title:
@@ -112,7 +118,7 @@ const AddReviews = () => {
                         />
                     </div>
 
-                    {/* Review Description */}
+          
                     <div className="md:col-span-1 col-span-2">
                         <label htmlFor="review" className="block mb-2">
                             Review Description:
@@ -127,7 +133,7 @@ const AddReviews = () => {
                        />
                     </div>
 
-                    {/* Rating */}
+                
                     <div className="md:col-span-1 col-span-2  gap-2 items-center  ">
       <label  className="block  mb-2">
         Rating (1-5):
@@ -146,7 +152,7 @@ const AddReviews = () => {
       </div>
     </div>
 
-                    {/* Publishing Year */}
+                
                     <div className="md:col-span-1 col-span-2">
                         <label htmlFor="year" className="block mb-2">
                             Publishing Year:
@@ -162,7 +168,7 @@ const AddReviews = () => {
                         />
                     </div>
 
-                    {/* Genres */}
+                
                     <div className="md:col-span-1 col-span-2">
                         <label htmlFor="genres" className="block mb-2">
                             Genres:
@@ -183,7 +189,6 @@ const AddReviews = () => {
                         </select>
                     </div>
 
-                    {/* User Email */}
                     <div className="md:col-span-1 col-span-2">
                         <label htmlFor="email" className="block mb-2">
                             User Email:
@@ -198,7 +203,7 @@ const AddReviews = () => {
                         />
                     </div>
 
-                    {/* User Name */}
+               
                     <div className="md:col-span-1 col-span-2">
                         <label htmlFor="username" className="block mb-2">
                             User Name:
@@ -213,7 +218,7 @@ const AddReviews = () => {
                         />
                     </div>
 
-                    {/* Submit Button */}
+                
                     <div className="col-span-1 md:col-span-2">
                         <button
                             type="submit"

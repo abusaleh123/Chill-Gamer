@@ -7,6 +7,7 @@ import { Link, useParams } from 'react-router-dom';
 import { MdDelete } from "react-icons/md";
 import { FaPen } from "react-icons/fa";
 import { Fade, Zoom } from 'react-awesome-reveal';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -58,8 +59,7 @@ const handleDelete = (id) => {
              
               
             }
-            // const remaining = review.filter(rev => rev._id !== _id);
-            //   setUser(remaining)
+          
           })
           .catch(error => {
             console.log(error);
@@ -69,6 +69,11 @@ const handleDelete = (id) => {
   };
     return (
         <div  className=" bg-black rounded-xl  pb-6">
+           <Helmet>
+             
+             <title>Chill Gamer || My Review</title>
+            
+         </Helmet>
         <Zoom>
         <table className="table   lg:w-8/12 mx-auto border pb-6 ">
 

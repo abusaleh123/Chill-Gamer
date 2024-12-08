@@ -1,9 +1,15 @@
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 
 const ErrorPage = () => {
     return (
         <div  className='flex  flex-col min-h-screen ' data-theme="light">
+             <Helmet>
+             
+             <title>Chill Gamer || Error</title>
+            
+         </Helmet>
            
           <div className='flex flex-col justify-center items-center '>
           <h1 className=" lg:text-[400px] text-[100px] font-bold text-background">

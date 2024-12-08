@@ -12,7 +12,7 @@ const HighRateCard = ({high}) => {
     return (
         <div className='  mx-auto ' >
           
-            {/* Card */}
+          
             <Zoom>
             <div className='bg-white/20 backdrop-blur-md  pb-6 rounded-xl h-full text-white'>
                 <img className=' object-cover rounded-t-xl' src={cover} alt="" />

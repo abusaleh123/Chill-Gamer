@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import MyReviewCard from "../Components/MyReviewCard";
+import { Helmet } from "react-helmet";
 
 
 const MyReviews = () => {
@@ -18,6 +19,11 @@ const email = user.email
 
   return (
     <div className="lg:pb-28  bg-black"> 
+     <Helmet>
+             
+             <title>Chill Gamer || My Review</title>
+            
+         </Helmet>
       <div className="bg-black mb-10 pt-6   flex flex-col text-center items-center lg:py-16 ">
         <h1 className="text-6xl font-semibold text-white">My Review</h1>
         <p className="text-xl mt-2">Here Is All My review that i added</p>

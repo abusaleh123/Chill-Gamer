@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import modalImg from '../../src/assets/modal.jpg'
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 
 const ReviewDetails = () => {
@@ -65,6 +66,11 @@ const ReviewDetails = () => {
     return (
         <div style={{  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${cover})`,  backgroundPosition: 'center',
         backgroundSize: 'cover',}} className="pt-20 min-h-screen  ">
+             <Helmet>
+             
+             <title>Chill Gamer || Review Details</title>
+            
+         </Helmet>
 
             <div className="flex flex-col items-center mb-16">
                 <h1 className="text-7xl text-white font-semibold">Review Details Of {title}</h1>

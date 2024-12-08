@@ -3,10 +3,7 @@ import HighRateCard from './HighRateCard';
 import bg from '../../src/assets/slider22.jpg';
 import { Fade, Roll, Slide } from 'react-awesome-reveal';
 
-// import AOS from 'aos';
-// import 'aos/dist/aos.css'; // You can also use <link> for styles
-// // ..
-// AOS.init();
+
 
 
 

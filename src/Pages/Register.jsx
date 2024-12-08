@@ -7,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
 import modalImg from '../../src/assets/modal.jpg'
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
     const {registerWithEmailPass, setUser, updateProfiler} = useContext(AuthContext);
@@ -96,6 +97,11 @@ const Register = () => {
     return (
         <div style={{  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bg})`,  backgroundPosition: 'center',
         backgroundSize: 'cover',}} className='pt-10 lg:pb-28 pb-10'>
+           <Helmet>
+             
+             <title>Chill Gamer || Register</title>
+            
+         </Helmet>
             <div className='lg:min-h-screen '>
             <div className="border md:w-8/12 mx-auto lg:min-h-screen  flex flex-col justify-center rounded-xl  backdrop-blur-md  bg-transparent ">
   <div className="hero-content flex-col  ">

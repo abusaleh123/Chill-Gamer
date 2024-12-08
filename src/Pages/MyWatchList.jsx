@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import WatchListTable from "../Components/WatchListTable";
+import { Helmet } from "react-helmet";
 
 
 const MyWatchList = () => {
@@ -17,6 +18,11 @@ const MyWatchList = () => {
 
     return (
         <div className="">
+           <Helmet>
+             
+             <title>Chill Gamer || My Watch List</title>
+            
+         </Helmet>
 
 <div className="bg-black flex flex-col items-center py-12 lg:py-16 ">
         <h1 className="text-6xl font-semibold text-white">My Watch List</h1>

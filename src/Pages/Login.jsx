@@ -6,6 +6,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 import auth from '../firebase.init';
 import modalImg from '../../src/assets/modal.jpg'
+import { Helmet } from 'react-helmet';
 // import auth from '../firebase.init';
 
 const Login = () => {
@@ -95,6 +96,11 @@ const Login = () => {
     return (
         <div style={{  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bg})`,  backgroundPosition: 'center',
         backgroundSize: 'cover',}} className='pt-10 lg:pb-28'>
+           <Helmet>
+             
+             <title>Chill Gamer || Login</title>
+            
+         </Helmet>
             <div className='lg:min-h-screen pb-10 lg:pb-0'>
             <div className="border md:w-8/12 mx-auto lg:min-h-screen  flex flex-col justify-center rounded-xl  backdrop-blur-md  bg-transparent ">
   <div className="hero-content flex-col  ">
