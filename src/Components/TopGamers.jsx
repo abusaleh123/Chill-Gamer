@@ -36,9 +36,9 @@ const TopGamers = ({isDarkMode}) => {
             <p className="text-yellow-400 font-bold">Reviews: 45</p>
             <p className="text-green-400 font-bold">Games Rated: 120</p>
           </div>
-          <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
+          {/* <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
             View Profile
-          </button>
+          </button> */}
         </div>
         </Zoom>
 <Zoom>
@@ -58,9 +58,9 @@ const TopGamers = ({isDarkMode}) => {
             <p className="text-yellow-400 font-bold">Reviews: 60</p>
             <p className="text-green-400 font-bold">Games Rated: 200</p>
           </div>
-          <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
+          {/* <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
             View Profile
-          </button>
+          </button> */}
         </div>
         </Zoom>
         <Zoom>
@@ -81,9 +81,9 @@ const TopGamers = ({isDarkMode}) => {
             <p className="text-yellow-400 font-bold">Reviews: 38</p>
             <p className="text-green-400 font-bold">Games Rated: 95</p>
           </div>
-          <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
+          {/* <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
             View Profile
-          </button>
+          </button> */}
         </div>
         </Zoom>
 <Zoom>
@@ -99,9 +99,9 @@ const TopGamers = ({isDarkMode}) => {
             <p className="text-yellow-400 font-bold">Reviews: 45</p>
             <p className="text-green-400 font-bold">Games Rated: 120</p>
           </div>
-          <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
+          {/* <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
             View Profile
-          </button>
+          </button> */}
         </div>
         </Zoom>
         <Zoom>
@@ -118,9 +118,9 @@ const TopGamers = ({isDarkMode}) => {
             <p className="text-yellow-400 font-bold">Reviews: 60</p>
             <p className="text-green-400 font-bold">Games Rated: 200</p>
           </div>
-          <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
+          {/* <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
             View Profile
-          </button>
+          </button> */}
         </div>
         </Zoom>
         <Zoom>
@@ -137,9 +137,9 @@ const TopGamers = ({isDarkMode}) => {
             <p className="text-yellow-400 font-bold">Reviews: 38</p>
             <p className="text-green-400 font-bold">Games Rated: 95</p>
           </div>
-          <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
+          {/* <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
             View Profile
-          </button>
+          </button> */}
         </div>
         </Zoom>
 <Zoom>
@@ -155,9 +155,9 @@ const TopGamers = ({isDarkMode}) => {
             <p className="text-yellow-400 font-bold">Reviews: 75</p>
             <p className="text-green-400 font-bold">Games Rated: 150</p>
           </div>
-          <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
+          {/* <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
             View Profile
-          </button>
+          </button> */}
         </div>
         </Zoom>
         <Zoom>
@@ -174,9 +174,9 @@ const TopGamers = ({isDarkMode}) => {
             <p className="text-yellow-400 font-bold">Reviews: 50</p>
             <p className="text-green-400 font-bold">Games Rated: 180</p>
           </div>
-          <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
+          {/* <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
             View Profile
-          </button>
+          </button> */}
         </div>
         </Zoom>
 <Zoom>
@@ -194,9 +194,9 @@ const TopGamers = ({isDarkMode}) => {
             <p className="text-yellow-400 font-bold">Reviews: 90</p>
             <p className="text-green-400 font-bold">Games Rated: 220</p>
           </div>
-          <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
+          {/* <button className={`mt-4 w-full btn btn-ghost border   ${isDarkMode ? 'text-white border-white' : 'text-black border-black'} font-semibold py-2 px-4 `}>
             View Profile
-          </button>
+          </button> */}
         </div>
         </Zoom>
 

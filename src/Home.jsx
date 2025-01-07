@@ -6,6 +6,8 @@ import Navbar from "./Components/Navbar";
 import Question from "./Components/Question";
 import TopGamers from "./Components/TopGamers";
 import { Helmet } from "react-helmet";
+import FeaturedGames from "./Components/Featured";
+import Newsletter from "./Components/Newsletter";
 
 
 const Home = () => {
@@ -26,6 +28,8 @@ const Home = () => {
             <HighRated isDarkMode={isDarkMode}></HighRated>
             <Question isDarkMode={isDarkMode} ></Question>
             <TopGamers isDarkMode={isDarkMode}></TopGamers>
+            <FeaturedGames></FeaturedGames>
+            <Newsletter></Newsletter>
             <Footer toggleTheme={toggleTheme} isDarkMode={isDarkMode}></Footer>
         </div>
     );
