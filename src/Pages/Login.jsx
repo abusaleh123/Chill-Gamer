@@ -45,6 +45,9 @@ const Login = () => {
       
               setUser(result);
               navigate('/')
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
             })
             .catch(error => {
 
@@ -79,8 +82,32 @@ const Login = () => {
   .then(result => {
     // console.log(result.user);
     setUser(result)
-    navigate('/')
+    // navigate('/')
+    Swal.fire({
+      icon: "success",
+      title: "Login Successful!",
+      text: "You Are Successfully Logged In",
+      background: `url(${modalImg}) no-repeat center top`, 
+      backgroundSize: 'cover', 
+      confirmButtonText: 'Close',
+      showCancelButton: false,
+      customClass: {
+        confirmButton: 'custom-confirm-button',
+      
+        popup: 'custom-popup', 
+        title: 'custom-title', 
+        icon: 'custom-icon' ,
+        
+      },
+      buttonsStyling: true
+    });
     // console.log(user);
+  })
+  .then(() => {
+    navigate('/')
+    setTimeout(() => {
+        window.location.reload()
+    }, 1000)
   })
   .catch(error => {
     // console.log(error.message);

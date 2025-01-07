@@ -62,16 +62,13 @@ const Register = () => {
         })
 
         updateProfiler({displayName: name, photoURL : photo})
-    .then(() => {
-     
-    })
+  
     setUser(result);
         Swal.fire({
           icon: "success",
-          title: "Registration Successful!",
-          text: "You Are Successfully Registered",
-          background: `url(${modalImg}) no-repeat center top`, 
-          backgroundSize: 'cover', 
+          title: "Login Successful!",
+          text: "You Are Successfully Loged In",
+          
           confirmButtonText: 'Close',
        
           showCancelButton: false,
@@ -89,9 +86,30 @@ const Register = () => {
        
     
         navigate('/')
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
        })
        .catch(error => {
         // console.log(error.message);
+        Swal.fire({
+          icon: "error",
+          title: "Registration Failed!",
+          text: "You are failed to Register",
+          
+          confirmButtonText: 'Close',
+       
+          showCancelButton: false,
+          customClass: {
+            confirmButton: 'custom-confirm-button',
+          
+            popup: 'custom-popup', 
+            title: 'custom-title', 
+            icon: 'custom-icon' ,
+            
+          },
+          buttonsStyling: true
+        });
        })
     }
     return (

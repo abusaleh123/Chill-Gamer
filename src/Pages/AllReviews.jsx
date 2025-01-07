@@ -123,7 +123,7 @@ const AllReviews = () => {
 
 
 
-<div className="w-10/12 pt-10 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
+<div className="w-10/12 pt-10 min-h-72 h-full mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 ">
 
 {
             reviews.map(reviews => <AllReviewCard key={reviews._id} reviews={reviews}></AllReviewCard>)

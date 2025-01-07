@@ -19,7 +19,7 @@ import { Fade, Zoom } from 'react-awesome-reveal';
 
 const Banner = ({isDarkMode}) => {
   return (
-    <div className='relative min-h-screen'>
+    <div className='relative max-h-[800px]'>
     <Swiper
     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCube]}
     spaceBetween={0}
@@ -40,7 +40,7 @@ const Banner = ({isDarkMode}) => {
 {/* <img className="w-screen h-screen object-cover relative" src={slider1} alt="" /> */}
 <div >
 <Zoom>
-     <div className='flex flex-col justify-center items-center min-h-screen'>
+     <div className='flex flex-col justify-center items-center w-full h-[800px]'>
 
 <h1 className={`${isDarkMode ? 'text-white ' : 'text-[#FFA500]'} lg:mb-8 text-2xl lg:text-6xl font-bold w-2/4 text-center `}>The Best Game Reviews for Every Genre, Platform, and Player</h1>
 
@@ -59,7 +59,7 @@ const Banner = ({isDarkMode}) => {
 {/* <img className="w-screen h-screen object-cover relative" src={slider1} alt="" /> */}
 <div >
 <Zoom>
-     <div className='flex flex-col justify-center items-center w-full min-h-screen'> 
+     <div className='flex flex-col justify-center items-center w-full h-[800px]'> 
      <h1 className={`${isDarkMode ? 'text-white ' : 'text-[#FFA500]'} lg:mb-8 text-2xl lg:text-6xl font-bold w-2/4 text-center`}>Explore, Review, and Play: Your Ultimate Gaming Companion Hub</h1>
     
       <p className='lg:w-3/4 text-center text-[#acaca7] font-semibold lg:mb-10 lg:text-lg lg:tracking-normal lg:leading-8'> Discover the latest games, read in-depth reviews, and dive into expert recommendations. From action-packed adventures to strategic simulations, we’re here to guide every player through their gaming journey.</p>
@@ -77,7 +77,7 @@ const Banner = ({isDarkMode}) => {
 {/* <img className="w-screen h-screen object-cover relative" src={slider1} alt="" /> */}
 <div className=' '>
 <Zoom>
-     <div className='flex flex-col justify-center items-center w-full min-h-screen'>
+     <div className='flex flex-col justify-center items-center w-full h-[800px]'>
      <h1 className={`${isDarkMode ? 'text-white ' : 'text-[#FFA500]'}  lg:mb-8 text-2xl lg:text-6xl font-bold w-2/4 text-center`}>Unbiased Game Reviews for Gamers on Every Platform Worldwide</h1>
      
       <p className={`lg:w-3/4 text-center text-[#d4d4d1] font-semibold lg:mb-10 lg:text-lg lg:tracking-normal lg:leading-8`}>Stay informed with fair and detailed reviews of the latest games across all platforms. Whether you’re on PC, console, or mobile, we bring you honest insights to help you choose the best gaming experiences.</p>

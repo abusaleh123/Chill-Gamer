@@ -21,10 +21,10 @@ const HighRated = ({isDarkMode}) => {
 
     return (
         <div style={{backgroundImage: `${isDarkMode ? "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))" : "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0))"}, url(${bg})`, backgroundSize: 'cover'}} className='bg-black '>
-            <div className='flex flex-col justify-center items-center  pt-12'>
+            <div className='flex flex-col justify-center items-center pt-12  lg:pt-20'>
             
              <Slide >
-             <h1 className="lg:text-7xl text-2xl font-bold text-white">Highest Rated Game</h1>
+             <h1 className="lg:text-7xl text-3xl md:text-4xl font-bold text-white">Highest Rated Game</h1>
             
         
                 <p className='text-xl text-center text-white/80 mt-2 mb-10'>A visually stunning open-world adventure with engaging combat, deep storytelling, rich lore, and dynamic gameplay that captivates players</p>

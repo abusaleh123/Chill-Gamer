@@ -10,7 +10,7 @@ import { Bounce, Zoom } from "react-awesome-reveal";
 const TopGamers = ({isDarkMode}) => {
   return (
     <section className={`${isDarkMode ? 'bg-gradient-to-r from-black via-gray-900  to-black py-16 px-8' : 'bg-white/50'} pb-16`}>
-      <div className="text-center mt-6 md:mt-20">
+      <div className="text-center pt-12 md:pt-20">
         <h2 className={`md:text-6xl text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-black'} mb-4`}>Player’s Spotlight</h2>
         <p className={` md:text-xl  ${isDarkMode ? 'text-gray-300' : 'text-black'} text-lg`}>
           Meet the top gamers making waves in our community!

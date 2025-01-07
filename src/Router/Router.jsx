@@ -43,9 +43,9 @@ errorElement: <ErrorPage></ErrorPage>
             },
             {
                 path: '/reviews/:id',
-                element: <PrivateRoute>
-                    <ReviewDetails></ReviewDetails>
-                </PrivateRoute>,
+                element: 
+                    <ReviewDetails></ReviewDetails>,
+       
                 loader: ({params}) => fetch(`https://chill-game-server.vercel.app/reviews/${params.id}`)
             },
             {
