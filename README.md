@@ -50,3 +50,24 @@ Currently, two official plugins are available:
 - [Sort By](https://github.com/kvnneff/sort-by) - ^1.2.0
 - [SweetAlert2](https://github.com/sweetalert2/sweetalert2) - ^11.14.5
 - [Swiper](https://github.com/nolimits4web/swiper) - ^11.1.15
+
+
+
+
+## Dev Dependencies
+
+- [@ESLint/js](https://github.com/eslint/eslint) - ^9.15.0
+- [@types/react](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react) - ^18.3.12
+- [@types/react-dom](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom) - ^18.3.1
+- [@vitejs/plugin-react](https://github.com/vitejs/vite/tree/main/packages/plugin-react) - ^4.3.4
+- [Autoprefixer](https://github.com/postcss/autoprefixer) - ^10.4.20
+- [DaisyUI](https://github.com/saadeghi/daisyui) - ^4.12.14
+- [ESLint](https://github.com/eslint/eslint) - ^9.15.0
+- [ESLint Plugin React](https://github.com/jsx-eslint/eslint-plugin-react) - ^7.37.2
+- [ESLint Plugin React Hooks](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks) - ^5.0.0
+- [ESLint Plugin React Refresh](https://github.com/vitejs/vite-plugin-react/tree/main/packages/react-refresh) - ^0.4.14
+- [Globals](https://github.com/sindresorhus/globals) - ^15.12.0
+- [PostCSS](https://github.com/postcss/postcss) - ^8.4.49
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) - ^3.4.15
+- [Vite](https://github.com/vitejs/vite) - ^6.0.1
+
