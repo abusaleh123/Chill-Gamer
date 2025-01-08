@@ -1,8 +1,6 @@
 # Chill Gamer: A Game Review Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
+Chill Gamer is a sleek and user-friendly game review application designed for gamers to explore, review, and manage their favorite games. With features like user authentication, personalized watchlists, and a clean, responsive interface, Chill Gamer ensures a seamless experience for discovering and sharing insights about the latest and greatest games.
 
 # Live Link:  
 - https://chill-game-6f6c6.web.app/
@@ -28,6 +26,17 @@ Currently, two official plugins are available:
 - Responsive design for all devices (mobile, tablet, desktop).
 - Dark/light theme toggle for better accessibility.
 - Engaging animations using React libraries like React Awesome Reveal, and React Tooltip.
+
+
+
+  ## Built With:
+
+<div align="left">
+  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
+  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg" width="52" height="40" alt="twitter logo"  />
+  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/discord/default.svg" width="52" height="40" alt="discord logo"  />
+  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/youtube/default.svg" width="52" height="40" alt="youtube logo"  />
+</div>
 
 
 ## Dependencies
