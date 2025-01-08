@@ -3,10 +3,10 @@
 Chill Gamer is a sleek and user-friendly game review application designed for gamers to explore, review, and manage their favorite games. With features like user authentication, personalized watchlists, and a clean, responsive interface, Chill Gamer ensures a seamless experience for discovering and sharing insights about the latest and greatest games.
 
 
-## Bout This Project
+## About This Project
 
-![Alt text](https://github.com/abusaleh123/Chill-Gamer/blob/7f3996690ffd819c60c302847f7ade541dbd1410/Screenshot%202025-01-08%20090431.png)
 ![Alt text](https://github.com/abusaleh123/Chill-Gamer/blob/6e5a077e393e6740b9f5a5db8f9c68cb4e0bbde5/Screenshot%202025-01-08%20091108.png)
+![Alt text](https://github.com/abusaleh123/Chill-Gamer/blob/7f3996690ffd819c60c302847f7ade541dbd1410/Screenshot%202025-01-08%20090431.png)
 
 
 
@@ -30,6 +30,8 @@ Chill Gamer is a sleek and user-friendly game review application designed for ga
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" height="40" alt="firebase logo"  />
 </div>
+
+#
 
 # Key Features: 
 
