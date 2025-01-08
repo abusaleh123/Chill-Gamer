@@ -5,7 +5,7 @@ Chill Gamer is a sleek and user-friendly game review application designed for ga
 
 ## Bout This Project
 
-([https://i.ibb.co.com/Ny82zKY/Screenshot-2025-01-08-090431.png])
+(https://i.ibb.co.com/Ny82zKY/Screenshot-2025-01-08-090431.png)
 
 
 
