@@ -6,13 +6,30 @@ Chill Gamer is a sleek and user-friendly game review application designed for ga
 ## Bout This Project
 
 ![Alt text](https://github.com/abusaleh123/Chill-Gamer/blob/7f3996690ffd819c60c302847f7ade541dbd1410/Screenshot%202025-01-08%20090431.png)
+![Alt text](https://github.com/abusaleh123/Chill-Gamer/blob/6e5a077e393e6740b9f5a5db8f9c68cb4e0bbde5/Screenshot%202025-01-08%20091108.png)
 
 
 
 
-# Live Link:  
-- https://chill-game-6f6c6.web.app/
+
 #
+
+
+
+
+  # Main Technology:
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="40" alt="tailwindcss logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" height="40" alt="firebase logo"  />
+</div>
 
 # Key Features: 
 
@@ -37,19 +54,7 @@ Chill Gamer is a sleek and user-friendly game review application designed for ga
 
 
 
-  ## Built With:
 
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="40" alt="tailwindcss logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" height="40" alt="firebase logo"  />
-</div>
 
 
 ## Dependencies
@@ -92,4 +97,13 @@ Chill Gamer is a sleek and user-friendly game review application designed for ga
 - [PostCSS](https://github.com/postcss/postcss) - ^8.4.49
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) - ^3.4.15
 - [Vite](https://github.com/vitejs/vite) - ^6.0.1
+
+
+## Installation: 
+
+Run ``` npm install ``` to install project dependencies
+
+
+# Live Link:  
+- https://chill-game-6f6c6.web.app
 
