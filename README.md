@@ -5,7 +5,7 @@ Chill Gamer is a sleek and user-friendly game review application designed for ga
 
 ## Bout This Project
 
-![Alt text]([image-url](https://github.com/abusaleh123/Chill-Gamer/blob/7f3996690ffd819c60c302847f7ade541dbd1410/Screenshot%202025-01-08%20090431.png))
+![Alt text](https://github.com/abusaleh123/Chill-Gamer/blob/7f3996690ffd819c60c302847f7ade541dbd1410/Screenshot%202025-01-08%20090431.png)
 
 
 
